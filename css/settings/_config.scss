@@ -1,0 +1,61 @@
+/* Colors (names from "Name that color"):
+https://graf1x.com/shades-of-orange-color-palette/
+http://chir.ag/projects/name-that-color/
+*/
+$color--mine-shaft: #333333;
+$color--don-juan: #5d4954;
+$color--mercury: #e2e2e2;
+$color--gallery: #f0f0f0;
+$color--white: #ffffff;
+$color--mellow: #F8DE7E;
+$color--gorse: #FFF14F;
+$color--amber: #FFBF00;
+$color--ochre: #CC7722;
+$color--honey: #EB9605;
+$color--gold: #F9A602;
+$color--saffron: #F8BA37;
+$color--tiger: #FD6A02;
+$color--anzac: #E2BA4B;
+$color--rob-roy: #E8C166;
+$color--mai-tai: #A86609;
+$color--gold-tips: #dea916;
+//=====================================================
+
+
+// General:
+$max-page-width: 850px;
+
+
+// Typography:
+$font-family--general: 'Poppins', sans-serif;
+$font-family--header: 'Handlee', cursive;
+
+
+// Header:
+$header-height: 60px;
+$logo-color: $color--gorse;
+
+$header-bg-color: $color--honey;
+// $header-bg-color: linear-gradient(to right, $color--honey, lighten($color--honey, 20%));
+// $header-bg-color: radial-gradient(lighten($color--honey, 25%), lighten($color--honey, 10%), $color--honey);
+$header-color: darken($color--white, 5%);
+
+$burger-bg-color: lighten($color--ochre, 5%);
+$burger-color: $color--mercury;
+
+
+// Hero:
+$hero-bg-color: radial-gradient(lighten($color--honey, 50%), lighten($color--honey, 35%), $color--honey);
+$hero-border-color: $color--gorse;
+
+
+// Footer:
+$footer-base-color: darken($color--anzac, 30%);
+
+// $footer-bg-color: radial-gradient(lighten($footer-base-color, 15%), $footer-base-color, darken($footer-base-color, 20%));
+$footer-bg-color: linear-gradient(to right, rgba(darken($footer-base-color, 20%), 0.92), rgba($footer-base-color, 0.92)), url("../images/landscape/img_7.jpg");
+$footer-color: lighten($color--anzac, 10%);
+
+$copyright-border-top-color: lighten($footer-base-color, 50%);
+$copyright-bg-color: darken($footer-base-color, 20%);
+$copyright-color: $footer-base-color;
