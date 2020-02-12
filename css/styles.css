@@ -1,13 +1,9 @@
-/* Colors (names from "Name that color"):
-https://graf1x.com/shades-of-orange-color-palette/
-http://chir.ag/projects/name-that-color/
-*/
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
-  background: #EB9605;
-  text-shadow: 1px 1px 5px black;
+  background: #fdf2d7;
+  text-shadow: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -36,8 +32,8 @@ header nav {
 }
 
 header nav .logo {
-  color: #FFF14F;
-  text-shadow: 2px 2px 5px black;
+  color: #d7a723;
+  text-shadow: 1px 1px 1px black;
   text-transform: uppercase;
 }
 
@@ -66,20 +62,20 @@ header nav .nav-list a {
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  color: #f2f2f2;
+  color: #ab851c;
   padding: 0.75em 0;
   font-size: 1rem;
 }
 
 header nav .nav-list a:hover {
-  color: white;
-  border-bottom: 5px solid #f2f2f2;
+  color: #d7a723;
+  border-bottom: 5px solid #ab851c;
 }
 
 header nav .nav-list a.active {
-  color: white;
+  color: #d7a723;
   pointer-events: none;
-  border-bottom: 5px solid #f2f2f2;
+  border-bottom: 5px solid #ab851c;
 }
 
 header nav .burger {
@@ -112,7 +108,7 @@ header nav .burger div {
     position: absolute;
     right: 0;
     top: 60px;
-    background: #EB9605;
+    background: #fdf2d7;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     min-width: 25%;
@@ -177,10 +173,10 @@ header nav .burger div {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: hero;
-  background: radial-gradient(#fff9f0, #fddda5, #EB9605);
+  background: radial-gradient(white, white, #fef0d7);
   text-align: center;
   border-top: 2px solid #FFF14F;
-  border-bottom: 5px solid #FFF14F;
+  border-bottom: 2px solid #FFF14F;
 }
 
 #hero .slider {
