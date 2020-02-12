@@ -1,0 +1,87 @@
+footer {
+    grid-area: footer;
+    border-top: 1px solid $copyright-border-top-color;
+    color: $footer-color;
+
+    background-image: $footer-bg-color;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 0;
+        .footer-section {
+            width: 100%;
+            margin-bottom: 2.5em;
+            font-size: 0.875rem;
+            p {
+                max-width: 600px;
+            }
+            .footer-section-title {
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                padding-bottom: 0.5em;
+            }
+            .contact-info {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.75em;
+                img {
+                    height: 1.75em;
+                    margin-right: 0.75em;
+                    // Link: https://codepen.io/sosuke/pen/Pjoqqp (CodePen Home CSS filter generator to convert from black to target hex color)
+                    filter: invert(86%) sepia(37%) saturate(534%) hue-rotate(344deg) brightness(94%) contrast(94%);
+                }
+                a {
+                    color: inherit;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+            .social-widget-image {
+                width: 3.5em;
+                margin: 0em 0.25em;
+                padding: 0.125em;
+                &:hover {
+                    padding: 0em;
+                }
+            }
+        }
+        .footer-section:last-child {
+            margin-bottom: 0em;
+        }
+    }
+    #copyright-container {
+        border-top: 1px solid $copyright-border-top-color;
+        background: $copyright-bg-color;
+        color: $copyright-color;
+        padding: 1.25em;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+}
+
+
+@media screen and (min-width: 950px) {
+    footer {
+        .container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            p {
+                text-align: left;
+            }
+            .footer-section {
+                padding: 1.5em;
+            }
+        }
+    }
+}

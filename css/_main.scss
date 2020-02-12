@@ -1,0 +1,43 @@
+main {
+    grid-area: main;
+    // background: $color--mercury;
+    padding: 2em 3em;
+    article {
+        margin-bottom: 2em;
+        ul {
+            margin-left: 2em;
+        }
+    }
+}
+
+
+#ajanlasok {
+    grid-area: ajanlasok;
+    // background: lightcoral;
+    padding: 2em 3em;
+    ul {
+        margin-top: 1em;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        li {
+            margin-bottom: 1em;
+            padding: 0.5em 1em;
+            border: 1px solid gray;
+            border-radius: 5px;
+            background: white;
+        }
+    }
+}
+
+
+#social {
+    grid-area: social;
+    padding: 2em;
+    background: lightgoldenrodyellow;
+    display: flex;
+    justify-content: center;
+    img {
+        padding: 0.5em;
+    }
+}
