@@ -1,3 +1,4 @@
+// MAIN:
 main {
     grid-area: main;
     // background: $color--mercury;
@@ -11,6 +12,7 @@ main {
 }
 
 
+// TESTIMONIALS:
 #ajanlasok {
     grid-area: ajanlasok;
     // background: lightcoral;
@@ -31,13 +33,27 @@ main {
 }
 
 
+// SOCIAL:
 #social {
-    grid-area: social;
-    padding: 2em;
-    background: lightgoldenrodyellow;
-    display: flex;
-    justify-content: center;
-    img {
-        padding: 0.5em;
+    display: none;
+}
+
+@media screen and (min-width: 950px) {
+    #social {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);;
+        display: flex;
+        flex-direction: column;
+        a {
+            height: 3.5em;
+        }
+        img {
+            height: 3.5em;
+            padding: 0.5em;
+            &:hover {
+                padding: 0.25em;
+            }
+        }
     }
 }

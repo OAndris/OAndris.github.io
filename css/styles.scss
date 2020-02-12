@@ -25,12 +25,11 @@
 body {
     display: grid;
     min-height: 100vh;
-    grid-template-rows: $header-height auto 1fr auto auto minmax(40vh, auto);
+    grid-template-rows: $header-height auto 1fr auto minmax(40vh, auto);
     grid-template-areas: "header"
                          "hero"
                          "main"
                          "ajanlasok"
-                         "social"
                          "footer";
 }
 
@@ -39,8 +38,8 @@ p {
     text-justify: auto;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
     html {
-        font-size: 75%;
+        font-size: 85%;
     }
 }
