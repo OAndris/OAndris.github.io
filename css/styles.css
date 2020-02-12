@@ -402,12 +402,18 @@ body {
   min-height: 100vh;
   -ms-grid-rows: 60px auto 1fr auto auto minmax(40vh, auto);
       grid-template-rows: 60px auto 1fr auto auto minmax(40vh, auto);
-      grid-template-areas: "header" "hero" "main" "ajanlasok" "social" "footer";
+      grid-template-areas: "header"
+ "hero"
+ "main"
+ "ajanlasok"
+ "social"
+ "footer";
 }
 
 p {
   text-align: justify;
   text-justify: auto;
+  
 }
 
 @media screen and (max-width: 350px) {
