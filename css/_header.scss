@@ -55,12 +55,13 @@ header {
         .burger {
             display: none;
             background: $burger-bg-color;
+            border-radius: 0.25em;
             cursor: pointer;
             div {
                background: $burger-color;
-               width: 35px;
-               height: 5px;
-               margin: 7px;
+               width: 1.75em;
+               height: 0.25em;
+               margin: 0.375em;
                transition: all 0.1s ease;
            }
         }
@@ -82,13 +83,13 @@ header {
             transform: translateX(100%);
             min-width: 25%;
             li {
-                margin: 1.5em 3em;
+                margin: 1em 1.5em;
                 text-align: center;
                 opacity: 0;
                 // animation: js-nav-links-appear 0.5s ease forwards 1s;
             }
             a {
-                font-size: 1.125rem;
+                font-size: 1rem;
             }
         }
         .burger {
@@ -97,9 +98,9 @@ header {
 
         // JavaScript-only classes:
         .js-burger-is-active {
-            .line1 {transform: rotate(-45deg) translate(-8px, 9px);}
+            .line1 {transform: rotate(-45deg) translate(-0.375em, 0.375em);}
             .line2 {opacity: 0;}
-            .line3 {transform: rotate(45deg) translate(-8px, -9px);}
+            .line3 {transform: rotate(45deg) translate(-0.375em, -0.375em);}
         }
         .js-nav-list-is-active {
             transform: translateX(0%);
