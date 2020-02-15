@@ -89,7 +89,7 @@ header nav .burger div {
   transition: all 0.1s ease;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1300px) {
   body {
     overflow-x: hidden;
   }
@@ -180,9 +180,6 @@ header nav .burger div {
 
 #hero img {
   width: 100%;
-  margin-top: 0.5em;
-  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 main {
@@ -417,7 +414,7 @@ p {
   text-justify: auto;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 630px) {
   html {
     font-size: 85%;
   }
