@@ -171,8 +171,6 @@ header nav .burger div {
   grid-area: hero;
   background: radial-gradient(white, white, #fef0d7);
   text-align: center;
-  border-top: 2px solid #FFF14F;
-  border-bottom: 2px solid #FFF14F;
 }
 
 #hero .slider {
