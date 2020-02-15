@@ -2,13 +2,12 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
-  background: #fdf2d7;
-  text-shadow: none;
+  background: #F4D72E;
+  text-shadow: 1px 1px 5px black;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 60px;
-  
+  height: 3.75em;
 }
 
 header * {
@@ -20,6 +19,7 @@ header * {
 }
 
 header nav {
+  margin: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,23 +29,17 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 60px;
+  min-height: 3.75em;
 }
 
 header nav .logo {
-  color: #d7a723;
-  text-shadow: 1px 1px 1px black;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px black;
   text-transform: uppercase;
 }
 
 header nav .logo h1 {
-  font-size: 1.25rem;
-  letter-spacing: 2px;
-}
-
-header nav .logo p {
-  font-size: 0.625rem;
-  letter-spacing: 1px;
+  font-size: 1.375rem;
 }
 
 header nav .nav-list {
@@ -63,20 +57,20 @@ header nav .nav-list a {
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ab851c;
+  color: #ffffff;
   padding: 0.75em 0;
   font-size: 1rem;
 }
 
 header nav .nav-list a:hover {
-  color: #d7a723;
-  border-bottom: 5px solid #ab851c;
+  color: white;
+  border-bottom: 5px solid #ffffff;
 }
 
 header nav .nav-list a.active {
-  color: #d7a723;
+  color: white;
   pointer-events: none;
-  border-bottom: 5px solid #ab851c;
+  border-bottom: 5px solid #ffffff;
 }
 
 header nav .burger {
@@ -109,8 +103,8 @@ header nav .burger div {
             align-items: center;
     position: absolute;
     right: 0;
-    top: 60px;
-    background: #fdf2d7;
+    top: 3.75em;
+    background: #F4D72E;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     min-width: 25%;
@@ -415,13 +409,9 @@ body {
   display: -ms-grid;
   display: grid;
   min-height: 100vh;
-  -ms-grid-rows: 60px auto 1fr auto minmax(40vh, auto);
-      grid-template-rows: 60px auto 1fr auto minmax(40vh, auto);
-      grid-template-areas: "header"
- "hero"
- "main"
- "ajanlasok"
- "footer";
+  -ms-grid-rows: 3.75em auto 1fr auto minmax(40vh, auto);
+      grid-template-rows: 3.75em auto 1fr auto minmax(40vh, auto);
+      grid-template-areas: "header" "hero" "main" "ajanlasok" "footer";
 }
 
 p {

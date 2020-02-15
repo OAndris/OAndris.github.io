@@ -10,6 +10,7 @@ $color--ochre: #CC7722;
 $color--honey: #EB9605;
 $color--anzac: #E2BA4B;
 $color--colonial: #fdf2d7;
+$color--golden-dream: #F4D72E;
 // DO NOT USE THESE COLORS OUTSIDE THIS FILE! ONLY USE THEM TO SET PUBLIC COLORS INSIDE THIS FILE.
 
 
@@ -29,16 +30,16 @@ $font-family--header: 'Handlee', cursive;
 //=====================================================
 // HEADER:
 //=====================================================
-$header-height: 60px;
+$header-height: 3.75em;
 
-$header-bg-color: $color--colonial;
+$header-bg-color: $color--golden-dream;
 // $header-bg-color: linear-gradient(to right, $color--honey, lighten($color--honey, 20%));
 // $header-bg-color: radial-gradient(lighten($color--honey, 25%), lighten($color--honey, 10%), $color--honey);
-$header-color: darken($color--anzac, 20%);
-$header-text-shadow: none;
+$header-color: $color--white;
+$header-text-shadow: 1px 1px 5px black;
 
-$logo-color: darken($color--anzac, 10%);;
-$logo-text-shadow: 1px 1px 1px black;
+$logo-color: $color--white;
+$logo-text-shadow: 1px 1px 10px black;
 $burger-bg-color: lighten($color--ochre, 5%);
 $burger-color: $color--mercury;
 
