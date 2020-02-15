@@ -23,8 +23,8 @@ $max-page-width: 850px;
 //=====================================================
 // TYPOGRAPHY:
 //=====================================================
-$font-family--general: 'Poppins', sans-serif;
-$font-family--header: 'Handlee', cursive;
+$font-family--general: 'Nanum Myeongjo', serif;
+$font-family--header: 'Nanum Myeongjo', serif;
 
 
 //=====================================================
@@ -36,10 +36,10 @@ $header-bg-color: $color--golden-dream;
 // $header-bg-color: linear-gradient(to right, $color--honey, lighten($color--honey, 20%));
 // $header-bg-color: radial-gradient(lighten($color--honey, 25%), lighten($color--honey, 10%), $color--honey);
 $header-color: $color--white;
-$header-text-shadow: 1px 1px 5px black;
+$header-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 
 $logo-color: $color--white;
-$logo-text-shadow: 1px 1px 10px black;
+$logo-text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
 $burger-bg-color: lighten($color--ochre, 5%);
 $burger-color: $color--mercury;
 
