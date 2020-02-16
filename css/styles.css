@@ -61,14 +61,14 @@ header nav .nav-list a {
 }
 
 header nav .nav-list a:hover {
-  text-shadow: none;
+  text-shadow: 0 0 3px black;
   border-bottom: 5px solid #ffffff;
 }
 
 header nav .nav-list a.active {
-  text-shadow: none;
-  pointer-events: none;
+  text-shadow: 0 0 3px black;
   border-bottom: 5px solid #ffffff;
+  pointer-events: none;
 }
 
 header nav .burger {
