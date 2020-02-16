@@ -32,6 +32,7 @@ $font-family--header: 'Nanum Myeongjo', serif;
 // HEADER:
 //=====================================================
 $header-height: 3.75em;
+$body-min-height: calc(100vh - 3.75em);  // note: Sass doesn't appear to support calc with variables
 
 $header-bg-color: $color--golden-dream;
 // $header-bg-color: linear-gradient(to right, $color--honey, lighten($color--honey, 20%));
