@@ -24,14 +24,9 @@
 }
 
 body {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    grid-template-rows: $header-height auto 1fr auto minmax(40vh, auto);
-    grid-template-areas: "header"
-                         "hero"
-                         "main"
-                         "ajanlasok"
-                         "footer";
 }
 
 p {
