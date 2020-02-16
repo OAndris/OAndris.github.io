@@ -209,8 +209,11 @@ main article ul {
 }
 
 #hires-novendekek ul {
-  margin: 0 1em;
+  margin: 0em;
   list-style: none;
+}
+
+#hires-novendekek .szakma-felsorolas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,10 +223,47 @@ main article ul {
           flex-direction: column;
 }
 
-#hires-novendekek ul li {
+#hires-novendekek .szakma-felsorolas li {
   margin-bottom: 0.5em;
-  padding: 0.5em 1em;
-  border: 1px solid gray;
+  padding: 1em;
+  border: 3px solid #ffe99b;
+  border-radius: 1em;
+}
+
+#hires-novendekek .hiresseg-felsorolas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#hires-novendekek .hiresseg-felsorolas li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: none;
+}
+
+#hires-novendekek .hiresseg-felsorolas li p {
+  text-align: center;
+}
+
+#hires-novendekek .hiresseg-felsorolas li img {
+  width: 5em;
   border-radius: 0.5em;
 }
 

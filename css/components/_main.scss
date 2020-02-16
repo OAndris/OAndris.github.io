@@ -26,15 +26,37 @@ main {
         text-indent: 0;
     }
     ul {
-        margin: 0 1em;
+        margin: 0em;
         list-style: none;
+    }
+    .szakma-felsorolas {
         display: flex;
         flex-direction: column;
         li {
             margin-bottom: 0.5em;
-            padding: 0.5em 1em;
-            border: 1px solid gray;
-            border-radius: 0.5em;
+            padding: 1em;
+            border: 3px solid $h2-bg-color;
+            border-radius: 1em;
         }
+    }
+    .hiresseg-felsorolas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: flex-end;
+            border: none;
+            p {
+                text-align: center;
+            }
+            img {
+                width: 5em;
+                border-radius: 0.5em;
+            }
+        }
+        
     }
 }
