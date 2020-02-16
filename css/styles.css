@@ -178,23 +178,38 @@ header nav .burger div {
 }
 
 main {
-  padding: 2em 3em;
+  padding: 2em 0;
 }
 
 main article {
+  line-height: 1.375em;
   margin-bottom: 2em;
 }
 
+main article h2 {
+  background: #ffe99b;
+  padding: 0.5em;
+  border-radius: 0.375em;
+}
+
+main article p {
+  padding: 0.5em;
+}
+
+main article p::first-line {
+  text-indent: 1em;
+}
+
 main article ul {
-  margin-left: 2em;
+  margin-left: 2.25em;
 }
 
-#ajanlasok {
-  padding: 2em 3em;
+#hires-novendekek p::first-line {
+  text-indent: 0;
 }
 
-#ajanlasok ul {
-  margin-top: 1em;
+#hires-novendekek ul {
+  margin: 0 1em;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,12 +220,11 @@ main article ul {
           flex-direction: column;
 }
 
-#ajanlasok ul li {
-  margin-bottom: 1em;
+#hires-novendekek ul li {
+  margin-bottom: 0.5em;
   padding: 0.5em 1em;
   border: 1px solid gray;
-  border-radius: 5px;
-  background: white;
+  border-radius: 0.5em;
 }
 
 #social-side {
@@ -383,7 +397,7 @@ footer #copyright-container {
 
 .container {
   width: 90%;
-  max-width: 750px;
+  max-width: 45em;
   margin: auto;
 }
 
@@ -397,6 +411,7 @@ body {
           flex-direction: column;
   min-height: calc(100vh - 3.75em);
   margin-top: 3.75em;
+  background: #fff4ce;
 }
 
 p {

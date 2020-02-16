@@ -1,30 +1,40 @@
-// MAIN:
 main {
-    // background: $color--mercury;
-    padding: 2em 3em;
+    padding: 2em 0;
     article {
+        line-height: 1.375em;
+        h2 {
+            background: $h2-bg-color;
+            padding: 0.5em;
+            border-radius: 0.375em;
+        }
+        p {
+            padding: 0.5em;
+            &::first-line {
+                text-indent: 1em;
+            }
+        }
         margin-bottom: 2em;
         ul {
-            margin-left: 2em;
+            margin-left: 2.25em;
         }
     }
 }
 
 
-// TESTIMONIALS:
-#ajanlasok {
-    padding: 2em 3em;
+#hires-novendekek {
+    p::first-line {
+        text-indent: 0;
+    }
     ul {
-        margin-top: 1em;
+        margin: 0 1em;
         list-style: none;
         display: flex;
         flex-direction: column;
         li {
-            margin-bottom: 1em;
+            margin-bottom: 0.5em;
             padding: 0.5em 1em;
             border: 1px solid gray;
-            border-radius: 5px;
-            background: white;
+            border-radius: 0.5em;
         }
     }
 }

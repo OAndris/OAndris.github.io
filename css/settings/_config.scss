@@ -18,7 +18,9 @@ $color--barley-white: #fff4ce;
 //=====================================================
 // GENERAL:
 //=====================================================
-$max-page-width: 750px;
+$max-page-width: 45em;
+$body-bg-color: $color--barley-white;
+$h2-bg-color: darken($color--barley-white, 10%);
 
 
 //=====================================================

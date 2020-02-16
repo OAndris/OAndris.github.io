@@ -29,6 +29,7 @@ body {
     flex-direction: column;
     min-height: $body-min-height;
     margin-top: $header-height;
+    background: $body-bg-color;
 }
 
 p {
