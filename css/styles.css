@@ -179,29 +179,30 @@ header nav .burger div {
 
 main {
   padding: 2em 0;
+  margin-top: auto;
 }
 
-main article {
+main section {
   line-height: 1.375em;
   margin-bottom: 2em;
 }
 
-main article h2 {
+main section h2 {
   background: #ffe99b;
   padding: 0.5em;
   border-radius: 0.375em;
 }
 
-main article p {
+main section p {
   padding: 0.5em;
 }
 
-main article p::first-line {
-  text-indent: 1em;
+main section ul {
+  margin-left: 2.25em;
 }
 
-main article ul {
-  margin-left: 2.25em;
+main .text-indent::first-line {
+  text-indent: 1em;
 }
 
 #hires-novendekek p::first-line {
@@ -437,7 +438,7 @@ footer #copyright-container {
 
 .container {
   width: 90%;
-  max-width: 45em;
+  max-width: 48em;
   margin: auto;
 }
 
