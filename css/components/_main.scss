@@ -8,6 +8,9 @@ main {
             padding: 0.5em;
             border-radius: 0.375em;
         }
+        h2 + div {
+            margin-top: 2em;
+        }
         p {
             padding: 0.5em;
         }
@@ -71,5 +74,26 @@ main {
         box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         border-radius: 1em;
         margin-top: 2em;
+    }
+}
+
+.kapcsolat {
+    margin-left: 1.25em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    img {
+        height: 1.75em;
+        margin-right: 1em;
+    }
+    a {
+        color: inherit;
+        &:hover {
+            text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+        }
+    }
+    p {
+        display: flex;
+        flex-direction: column;
     }
 }
