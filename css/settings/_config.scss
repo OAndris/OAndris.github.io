@@ -4,6 +4,7 @@
 // http://chir.ag/projects/name-that-color/
 //=====================================================
 $color--mercury: #e2e2e2;
+$color--x: #555555;
 $color--white: #ffffff;
 $color--gorse: #FFF14F;
 $color--ochre: #CC7722;
@@ -28,6 +29,7 @@ $h2-bg-color: darken($color--barley-white, 10%);
 //=====================================================
 $font-family--general: 'Poppins', sans-serif;
 $font-family--header: 'Poppins', sans-serif;
+$font-family-logo: 'Kaushan Script', cursive;
 
 
 //=====================================================
@@ -36,14 +38,14 @@ $font-family--header: 'Poppins', sans-serif;
 $header-height: 3.75em;
 $body-min-height: calc(100vh - 3.75em);  // note: Sass doesn't appear to support calc with variables
 
-$header-bg-color: $color--golden-dream;
+$header-bg-color: $color--white;
 // $header-bg-color: linear-gradient(to right, $color--honey, lighten($color--honey, 20%));
 // $header-bg-color: radial-gradient(lighten($color--honey, 25%), lighten($color--honey, 10%), $color--honey);
-$header-color: $color--white;
-$header-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+$header-color: $color--x;
+$header-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 
-$logo-color: $color--white;
-$logo-text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
+$logo-color: $color--x;
+$logo-text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
 $burger-bg-color: lighten($color--ochre, 5%);
 $burger-color: $color--mercury;
 
