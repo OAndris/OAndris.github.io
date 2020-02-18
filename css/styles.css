@@ -412,6 +412,11 @@ footer #copyright-container {
   footer .container .footer-section {
     padding: 1.5em;
   }
+  footer .container .footer-section:first-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+  }
 }
 
 * {

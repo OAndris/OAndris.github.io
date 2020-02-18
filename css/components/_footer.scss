@@ -74,6 +74,9 @@ footer {
             .footer-section {
                 padding: 1.5em;
             }
+            .footer-section:first-child {
+                flex: 0 0 70%;
+            }
         }
     }
 }
