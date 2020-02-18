@@ -39,7 +39,7 @@ $font-family-logo: 'Kaushan Script', cursive;
 $header-height: 3.75em;
 $body-min-height: calc(100vh - 3.75em);  // note: Sass doesn't appear to support calc with variables
 
-$header-bg-color: $color--white;
+$header-bg-color: rgba(255,255,255,0.95);
 // $header-bg-color: linear-gradient(to right, $color--honey, lighten($color--honey, 20%));
 // $header-bg-color: radial-gradient(lighten($color--honey, 25%), lighten($color--honey, 10%), $color--honey);
 $header-color: $color--emperor;
