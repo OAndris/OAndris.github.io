@@ -199,9 +199,27 @@ header nav .burger div {
   top: 60px;
   left: 0.25em;
   text-align: left;
-  text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
   font-size: 3vw;
   color: #e2e2e2;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+#hero button {
+  position: absolute;
+  top: 75px;
+  right: 15px;
+  padding: 0.25em 1em;
+  border: 1px solid black;
+  border-radius: 0.375em;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 1.8vw;
+  color: #e2e2e2;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#hero button:hover {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 main {
