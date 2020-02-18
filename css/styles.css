@@ -43,7 +43,7 @@ header nav .logo h1 a {
   vertical-align: middle;
   color: #555555;
   font-size: 1.25rem;
-  font-family: "Kaushan Script", cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 header nav .nav-list {
@@ -181,7 +181,6 @@ header nav .burger div {
 }
 
 #hero {
-  background: radial-gradient(white, white, #fef0d7);
   text-align: center;
 }
 
@@ -197,21 +196,23 @@ header nav .burger div {
 #hero h2 {
   position: absolute;
   top: 60px;
-  left: 0.25em;
   text-align: left;
-  font-size: 3vw;
-  color: #e2e2e2;
+  font-size: 2vw;
+  padding: 0.125em 0.375em;
+  border-radius: 0 0 0.75em 0;
+  color: black;
+  background: #ffc701;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
 }
 
 #hero button {
-  position: absolute;
-  top: 75px;
-  right: 15px;
-  padding: 0.25em 1em;
-  border: 1px solid black;
-  border-radius: 0.375em;
-  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 60px;
+  right: 0px;
+  padding: 0.25em 0.5em;
+  border: 0px solid black;
+  border-radius: 0 0 0 0.5em;
+  background: #808080;
   font-size: 1.8vw;
   color: #e2e2e2;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
@@ -220,6 +221,15 @@ header nav .burger div {
 
 #hero button:hover {
   background: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 1000px) {
+  #hero h2 {
+    font-size: 1.25rem;
+  }
+  #hero button {
+    font-size: 1.125rem;
+  }
 }
 
 main {
@@ -522,12 +532,12 @@ footer #copyright-container {
 }
 
 *::-moz-selection {
-  background: yellow;
+  background: #ffc701;
   color: black;
 }
 
 *::selection {
-  background: yellow;
+  background: #ffc701;
   color: black;
 }
 

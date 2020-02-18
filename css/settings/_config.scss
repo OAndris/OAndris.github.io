@@ -14,6 +14,8 @@ $color--colonial: #fdf2d7;
 $color--golden-dream: #F4D72E;
 $color--barley-white: #fff4ce;
 $color--mine-shaft: #2f2f2f;
+$color--gray: #808080;
+$color--supernova: #ffc701;
 // DO NOT USE THESE COLORS OUTSIDE THIS FILE! ONLY USE THEM TO SET PUBLIC COLORS INSIDE THIS FILE.
 
 
@@ -30,7 +32,7 @@ $h2-bg-color: none;
 //=====================================================
 $font-family--general: 'Poppins', sans-serif;
 $font-family--header: 'Poppins', sans-serif;
-$font-family-logo: 'Kaushan Script', cursive;
+$font-family-logo: 'Poppins', sans-serif;
 
 
 //=====================================================
@@ -40,8 +42,6 @@ $header-height: 60px;
 $body-min-height: calc(100vh - 60px);  // note: Sass doesn't appear to support calc with variables
 
 $header-bg-color: rgba(255,255,255,0.95);
-// $header-bg-color: linear-gradient(to right, $color--honey, lighten($color--honey, 20%));
-// $header-bg-color: radial-gradient(lighten($color--honey, 25%), lighten($color--honey, 10%), $color--honey);
 $header-color: $color--emperor;
 $header-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 
@@ -54,7 +54,11 @@ $burger-color: $color--mercury;
 //=====================================================
 // HERO:
 //=====================================================
-$hero-bg-color: radial-gradient(lighten($color--honey, 70%), lighten($color--honey, 55%), lighten($color--honey, 45%));
+$hero-slogan-bg-color: $color--supernova;
+$hero-slogan-color: black;
+
+$hero-button-bg-color: $color--gray;
+$hero-button-color: $color--mercury;
 
 
 //=====================================================
@@ -62,7 +66,6 @@ $hero-bg-color: radial-gradient(lighten($color--honey, 70%), lighten($color--hon
 //=====================================================
 $footer-base-color: $color--mine-shaft;
 
-// $footer-bg-color: radial-gradient(lighten($footer-base-color, 10%), $footer-base-color, darken($footer-base-color, 10%));
 $footer-bg-color: $footer-base-color;
 $footer-color: $color--mercury;
 
