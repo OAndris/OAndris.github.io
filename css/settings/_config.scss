@@ -13,6 +13,7 @@ $color--anzac: #E2BA4B;
 $color--colonial: #fdf2d7;
 $color--golden-dream: #F4D72E;
 $color--barley-white: #fff4ce;
+$color--mine-shaft: #2f2f2f;
 // DO NOT USE THESE COLORS OUTSIDE THIS FILE! ONLY USE THEM TO SET PUBLIC COLORS INSIDE THIS FILE.
 
 
@@ -20,8 +21,8 @@ $color--barley-white: #fff4ce;
 // GENERAL:
 //=====================================================
 $max-page-width: 48em;
-$body-bg-color: $color--barley-white;
-$h2-bg-color: darken($color--barley-white, 10%);
+$body-bg-color: $color--white;
+$h2-bg-color: none;
 
 
 //=====================================================
@@ -46,7 +47,7 @@ $header-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 
 $logo-color: $color--emperor;
 $logo-text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
-$burger-bg-color: lighten($color--ochre, 5%);
+$burger-bg-color: $color--emperor;
 $burger-color: $color--mercury;
 
 
@@ -59,12 +60,12 @@ $hero-bg-color: radial-gradient(lighten($color--honey, 70%), lighten($color--hon
 //=====================================================
 // FOOTER:
 //=====================================================
-$footer-base-color: darken($color--anzac, 30%);
+$footer-base-color: $color--mine-shaft;
 
-// $footer-bg-color: radial-gradient(lighten($footer-base-color, 15%), $footer-base-color, darken($footer-base-color, 20%));
-$footer-bg-color: linear-gradient(to right, rgba(darken($footer-base-color, 20%), 0.92), rgba($footer-base-color, 0.92)), url("../images/landscape/img_7.jpg");
-$footer-color: lighten($color--anzac, 10%);
+// $footer-bg-color: radial-gradient(lighten($footer-base-color, 10%), $footer-base-color, darken($footer-base-color, 10%));
+$footer-bg-color: $footer-base-color;
+$footer-color: $color--mercury;
 
 $copyright-border-top-color: lighten($footer-base-color, 50%);
 $copyright-bg-color: darken($footer-base-color, 20%);
-$copyright-color: $footer-base-color;
+$copyright-color: darken($footer-color, 50%);

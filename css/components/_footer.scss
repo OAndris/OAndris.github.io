@@ -2,15 +2,9 @@ footer {
     margin-top: auto;
     border-top: 1px solid $copyright-border-top-color;
     color: $footer-color;
-
-    background-image: $footer-bg-color;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    background: $footer-bg-color;
     display: flex;
     flex-direction: column;
-
     .container {
         display: flex;
         flex-direction: column;
@@ -37,7 +31,7 @@ footer {
                     height: 1.75em;
                     margin-right: 0.75em;
                     // Link: https://codepen.io/sosuke/pen/Pjoqqp (CodePen Home CSS filter generator to convert from black to target hex color)
-                    filter: invert(86%) sepia(37%) saturate(534%) hue-rotate(344deg) brightness(94%) contrast(94%);
+                    filter: invert(94%) sepia(0%) saturate(886%) hue-rotate(33deg) brightness(116%) contrast(77%);
                 }
                 a {
                     color: inherit;
