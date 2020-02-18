@@ -279,7 +279,11 @@ main .text-indent::first-line {
 }
 
 #img-rolam {
-  width: 100%;
+  text-align: center;
+}
+
+#img-rolam img {
+  width: 75%;
   -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   border-radius: 1em;
