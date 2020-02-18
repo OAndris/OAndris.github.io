@@ -124,3 +124,9 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 550px) {
+    header nav .logo h1 a {
+        font-size: 0.75rem;
+    }
+}
