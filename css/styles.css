@@ -8,7 +8,7 @@ header {
 }
 
 header * {
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Poppins", sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -87,7 +87,13 @@ header nav .burger div {
   transition: all 0.1s ease;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1150px) {
+  header nav .logo h1 a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
   body {
     overflow-x: hidden;
   }
@@ -423,7 +429,7 @@ footer #copyright-container {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Poppins", sans-serif;
 }
 
 *::-moz-selection {
