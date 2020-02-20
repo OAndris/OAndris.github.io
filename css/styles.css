@@ -496,7 +496,6 @@ footer {
   border-top: 1px solid #afafaf;
   color: #e2e2e2;
   background: #2f2f2f;
-  min-height: calc(100vh - (60px + 54.5vw));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
