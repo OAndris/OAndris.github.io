@@ -359,6 +359,10 @@ main .text-indent::first-line {
 /* ==================================
 "RÓLAM" OLDAL
 ================================== */
+#diploma {
+  width: 100%;
+}
+
 #rolam-arckep-logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
