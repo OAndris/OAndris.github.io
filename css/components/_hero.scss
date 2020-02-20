@@ -11,9 +11,9 @@
     }
     h2 {
         position: absolute;
-        top: 60px;
+        top: $header-height;
         text-align: left;
-        font-size: 2vw;
+        font-size: 0.75rem;
         padding: 0.125em 0.375em;
         border-radius: 0 0 0.75em 0;
         color: $hero-slogan-color;
@@ -22,29 +22,32 @@
     }
     button {
         position: fixed;
-        top: 60px;
+        top: $header-height;
         right: 0px;
         padding: 0.25em 0.5em;
         border: 0px solid black;
         border-radius: 0 0 0 0.5em;
         background: $hero-button-bg-color;
-        font-size: 1.8vw;
+        font-size: 0.875rem;
         color: $hero-button-color;
         text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
         cursor: pointer;
         &:hover {
             background: rgba(0,0,0,0.4);
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
         }
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 480px) {
     #hero {
-        h2 {
-            font-size: 1.25rem;
-        }
-        button {
-            font-size: 1.125rem;
-        }
+        h2 {font-size: 2.5vw;}
+        button {font-size: 2.92vw;}
+    }
+}
+@media screen and (min-width: 960px) {
+    #hero {
+        h2 {font-size: 1.5rem;}
+        button {font-size: 1.75rem;}
     }
 }

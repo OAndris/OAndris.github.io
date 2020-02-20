@@ -175,7 +175,7 @@ header nav .burger div {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 460px) {
   header nav .logo h1 a {
     font-size: 0.75rem;
   }
@@ -198,7 +198,7 @@ header nav .burger div {
   position: absolute;
   top: 60px;
   text-align: left;
-  font-size: 2vw;
+  font-size: 0.75rem;
   padding: 0.125em 0.375em;
   border-radius: 0 0 0.75em 0;
   color: black;
@@ -214,7 +214,7 @@ header nav .burger div {
   border: 0px solid black;
   border-radius: 0 0 0 0.5em;
   background: #808080;
-  font-size: 1.8vw;
+  font-size: 0.875rem;
   color: #e2e2e2;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -222,14 +222,25 @@ header nav .burger div {
 
 #hero button:hover {
   background: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 480px) {
   #hero h2 {
-    font-size: 1.25rem;
+    font-size: 2.5vw;
   }
   #hero button {
-    font-size: 1.125rem;
+    font-size: 2.92vw;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #hero h2 {
+    font-size: 1.5rem;
+  }
+  #hero button {
+    font-size: 1.75rem;
   }
 }
 
@@ -626,11 +637,5 @@ body {
 p {
   text-align: justify;
   text-justify: auto;
-}
-
-@media screen and (max-width: 630px) {
-  html {
-    font-size: 85%;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

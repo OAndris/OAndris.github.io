@@ -39,7 +39,7 @@ $font-family-logo: 'Poppins', sans-serif;
 // HEADER:
 //=====================================================
 $header-height: 60px;
-$body-min-height: calc(100vh - 60px);  // note: Sass doesn't appear to support calc with variables
+$body-min-height: calc(100vh - 60px);  // note: Sass doesn't appear to support calc with variables (had to hard-code header height)
 
 $header-bg-color: rgba(255,255,255,0.95);
 $header-color: $color--emperor;

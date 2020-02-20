@@ -2,7 +2,7 @@ footer {
     border-top: 1px solid $copyright-border-top-color;
     color: $footer-color;
     background: $footer-bg-color;
-    min-height: calc(100vh - (60px + 54.5vw));
+    min-height: calc(100vh - (60px + 54.5vw));  // note: Sass doesn't appear to support calc with variables (had to hard-code header height)
     display: flex;
     flex-direction: column;
     .container {
