@@ -476,10 +476,10 @@ main .text-indent::first-line {
 }
 
 footer {
-  margin-top: auto;
   border-top: 1px solid #afafaf;
   color: #e2e2e2;
   background: #2f2f2f;
+  min-height: calc(100vh - (60px + 54.5vw));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,8 +578,8 @@ footer #copyright-container {
   }
   footer .container .footer-section:first-child {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 77%;
-            flex: 0 0 77%;
+        -ms-flex: 0 0 65%;
+            flex: 0 0 65%;
   }
   footer .short-text p {
     text-align: left;
