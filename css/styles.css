@@ -181,6 +181,12 @@ header nav .burger div {
   }
 }
 
+@media screen and (max-width: 360px) {
+  header nav .logo h1 a {
+    font-size: 0.625rem;
+  }
+}
+
 #hero {
   text-align: center;
 }

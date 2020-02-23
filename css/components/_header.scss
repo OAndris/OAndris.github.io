@@ -130,3 +130,8 @@ header {
         font-size: 0.75rem;
     }
 }
+@media screen and (max-width: 360px) {
+    header nav .logo h1 a {
+        font-size: 0.625rem;
+    }
+}
