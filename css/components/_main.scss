@@ -32,6 +32,18 @@ main {
     }
 }
 
+@media screen and (min-width: 900px) {
+    section:first-child {
+        h2 {
+            position: absolute;
+            left: 0;
+            top: $header-height;
+            border-radius: 0 0 0.375em 0;
+            background: $color--supernova;
+        }
+    }
+}
+
 #szeles_sav {
     img {
         width: 100%;

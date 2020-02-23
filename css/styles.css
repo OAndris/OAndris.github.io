@@ -288,6 +288,16 @@ main .text-indent::first-line {
   text-indent: 1em;
 }
 
+@media screen and (min-width: 900px) {
+  section:first-child h2 {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    border-radius: 0 0 0.375em 0;
+    background: #ffc701;
+  }
+}
+
 #szeles_sav img {
   width: 100%;
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
