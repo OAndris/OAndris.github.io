@@ -33,8 +33,7 @@
         text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
         cursor: pointer;
         &:hover {
-            background: rgba(0,0,0,0.4);
-            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+            color: $color--supernova;
         }
     }
 }

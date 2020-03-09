@@ -227,9 +227,7 @@ header nav .burger div {
 }
 
 #hero button:hover {
-  background: rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  color: #ffc701;
 }
 
 @media screen and (min-width: 480px) {
