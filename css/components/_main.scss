@@ -39,7 +39,11 @@ main {
             left: 0;
             top: $header-height;
             border-radius: 0 0 0.375em 0;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: $hero-slogan-color;
             background: $color--supernova;
+            text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
         }
     }
 }

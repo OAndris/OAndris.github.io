@@ -204,9 +204,10 @@ header nav .burger div {
   position: absolute;
   top: 60px;
   text-align: left;
-  font-size: 0.75rem;
   padding: 0.125em 0.375em;
   border-radius: 0 0 0.75em 0;
+  font-size: 0.75rem;
+  font-style: italic;
   color: black;
   background: #ffc701;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
@@ -292,7 +293,11 @@ main .text-indent::first-line {
     left: 0;
     top: 60px;
     border-radius: 0 0 0.375em 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: black;
     background: #ffc701;
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
   }
 }
 

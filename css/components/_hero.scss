@@ -13,9 +13,10 @@
         position: absolute;
         top: $header-height;
         text-align: left;
-        font-size: 0.75rem;
         padding: 0.125em 0.375em;
         border-radius: 0 0 0.75em 0;
+        font-size: 0.75rem;
+        font-style: italic;
         color: $hero-slogan-color;
         background: $hero-slogan-bg-color;
         text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
