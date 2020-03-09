@@ -71,7 +71,7 @@ main {
     }
 }
 
-#ajanlott-szakirodalom ul {
+#ajanlott-szakirodalom {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,7 +99,7 @@ main {
     }
 }
 @media screen and (min-width: 870px) {
-    #ajanlott-szakirodalom ul {
+    #ajanlott-szakirodalom {
         flex-flow: row wrap;
         li {
             margin-left: 1em;

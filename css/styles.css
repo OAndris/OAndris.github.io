@@ -324,7 +324,7 @@ main .text-indent::first-line {
   border-radius: 0.5em;
 }
 
-#ajanlott-szakirodalom ul {
+#ajanlott-szakirodalom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,7 +342,7 @@ main .text-indent::first-line {
   margin: 1em;
 }
 
-#ajanlott-szakirodalom ul li {
+#ajanlott-szakirodalom li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,36 +355,36 @@ main .text-indent::first-line {
   margin-bottom: 2em;
 }
 
-#ajanlott-szakirodalom ul li p {
+#ajanlott-szakirodalom li p {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   text-align: center;
 }
 
-#ajanlott-szakirodalom ul li img {
+#ajanlott-szakirodalom li img {
   width: 100%;
   border-radius: 0 0.5em 0.5em 0;
   -webkit-box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-#ajanlott-szakirodalom ul li:last-child {
+#ajanlott-szakirodalom li:last-child {
   margin-bottom: auto;
 }
 
 @media screen and (min-width: 870px) {
-  #ajanlott-szakirodalom ul {
+  #ajanlott-szakirodalom {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
   }
-  #ajanlott-szakirodalom ul li {
+  #ajanlott-szakirodalom li {
     margin-left: 1em;
     margin-right: 1em;
   }
-  #ajanlott-szakirodalom ul li img {
+  #ajanlott-szakirodalom li img {
     height: 30em;
     -o-object-fit: cover;
        object-fit: cover;
