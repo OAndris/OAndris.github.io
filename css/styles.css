@@ -595,6 +595,22 @@ main .text-indent::first-line {
 }
 
 /* ==================================
+"HIREK" OLDAL
+================================== */
+#hirek ul {
+  margin-top: 1em;
+}
+
+#hirek img {
+  width: 75%;
+  display: block;
+  margin: 1.5em auto;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 5px 5px 10px gray;
+          box-shadow: 5px 5px 10px gray;
+}
+
+/* ==================================
 "KAPCSOLAT" OLDAL
 ================================== */
 .kapcsolat {
