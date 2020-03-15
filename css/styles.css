@@ -550,7 +550,7 @@ main .text-indent::first-line {
 }
 
 #velemenyek div {
-  background: #FFF14F;
+  background: #e2e2e2;
   border-radius: 0.75em;
   width: 90%;
   margin: 1.5em auto;
