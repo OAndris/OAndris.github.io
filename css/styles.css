@@ -549,6 +549,51 @@ main .text-indent::first-line {
   }
 }
 
+#velemenyek div {
+  background: #FFF14F;
+  border-radius: 0.75em;
+  width: 90%;
+  margin: 1.5em auto;
+  padding: 0.25em 1.25em;
+}
+
+#velemenyek div blockquote {
+  position: relative;
+}
+
+#velemenyek div blockquote p,
+#velemenyek div p {
+  text-align: center;
+}
+
+#velemenyek blockquote:before,
+#velemenyek blockquote:after {
+  position: absolute;
+}
+
+#velemenyek blockquote:before {
+  content: '';
+  background-image: url("../../assets/widgets/quote-left-solid.svg");
+  background-size: 1.675rem;
+  height: 1.675rem;
+  width: 1.675rem;
+  top: 0.375em;
+  right: 100%;
+  margin-right: 1.5em;
+}
+
+#velemenyek blockquote:after {
+  content: '';
+  background-image: url("../../assets/widgets/quote-right-solid.svg");
+  background-size: 1.675rem;
+  height: 1.675rem;
+  width: 1.675rem;
+  top: auto;
+  bottom: 0.375em;
+  left: 100%;
+  margin-left: 1.5em;
+}
+
 /* ==================================
 "KAPCSOLAT" OLDAL
 ================================== */
