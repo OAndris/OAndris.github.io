@@ -35,54 +35,14 @@
     </header>
 
 
-    <section id="szeles_sav">
-        <img src="./images/szeles_sav/kicsi5.jpg" alt="">
-    </section>
-
-
-    <main class="container">
-        <section>
-            <h2>Fotók</h2>
-            <p><a href="./kepek.html">Nézd meg képeinket!</a></p>
-        </section>
-        <section>
-            <h2>Videók</h2>
-            <div class="iframe-container">
-                <iframe width="730" height="315" src="https://www.youtube.com/embed/lEmQHuYt404" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <main id="kepek">
+        <div class="overlay">
+            <div class="overlay-inner">
+                <button class="close">Bezár</button>
+                <img src="" alt="">
             </div>
-        </section>
-        <section>
-            <h2>Letölthető dokumentumok</h2>
-            <p><a href="./assets/Mi az Alexander.pdf" target="_blank">Mi az az Alexander-technika?</a></p>
-            <p><a href="./assets/Mi az Alexander zenészeknek.pdf" target="_blank">Alexander-technika zenészeknek</a></p>
-            <p><a href="./assets/Alexander-technika Budapesten.pdf" target="_blank">Alexander-technika Budapesten!</a></p>
-            <p><a href="./assets/Kovacs_Kinga_szakdolgozat.pdf" target="_blank">Kovács Kinga - Szakdolgozat</a></p>
-        </section>
-        <section>
-            <h2>Ajánlott szakirodalom</h2>
-            <ul id="ajanlott-szakirodalom">
-                <li>
-                    <p><strong>F. M. Alexander</strong>: Önmagunk használatáról (Stúdió Alexander Bt., 2000)</p>
-                    <img src="./images/szakirodalom/f-m-alexander-onmagunk-hasznalatarol.jpg" alt="">
-                </li>
-                <li>
-                    <p><strong>Richard Brennan</strong>: Az Alexander-technika kézikönyve (Bioenergetic Kiadó, 2018)</p>
-                    <img src="./images/szakirodalom/richard-brennan-az-alexander-technika-kezikonyve.jpg" alt="">
-                </li>
-                <li>
-                    <p><strong>Barbara Conable</strong>: Amit minden zenésznek tudnia kell a testéről (e-könyv, 2011)</p>
-                    <img src="./images/szakirodalom/barbara-conable-amit-minden-zenesznek-tudnia-kell-a-testerol.png" alt="">
-                </li>
-                <li>
-                    <p><strong>F. M. Alexander</strong>: Az egyén konstruktív tudatos kontrollja (Stúdió Alexander Bt., e-könyv, 2011)</p>
-                    <img src="./images/szakirodalom/f-m-alexander-az-egyen-konstruktiv-tudatos-kontrollja.png" alt="">
-                </li>
-                <li>
-                    <p><strong>Richard Brennan</strong>: Az Alexander-módszer alapjai (Édesvíz Kiadó, 2001)</p>
-                    <img src="./images/szakirodalom/richard-brennan-az-alexander-modszer-alapjai.jpg" alt="">
-                </li>
-            </ul>
-        </section>
+        </div>
+        <section class="gallery"></section>
     </main>
     
 
@@ -132,5 +92,62 @@
     <!-- SCRIPTS -->
     <script src="./js/header.js"></script>
     <script src="./js/imageSlider.js"></script>
+
+    <script>
+        const numberOfRandomSizeImages = 30;
+        const numberOfFillerImages = 150;
+
+        const gallery = document.querySelector('.gallery');
+        const overlay = document.querySelector('.overlay');
+        const overlayImage = overlay.querySelector('img');
+        const overlayClose = overlay.querySelector('.close');
+
+        function generateHTML([h, v]) {
+            // <img src="images/${randomNumber(12)}.jpg"/>
+            return `
+                <div class="item h${h} v${v}">
+                    <img src="https://picsum.photos/id/${randomNumber(80)}/500/500"/>
+                    <div class="item__overlay">
+                    </div>
+                </div>
+            `;
+        }
+        function randomNumber(limit) {
+            return Math.floor(Math.random() * limit) + 1;
+        }
+        function openImage(event) {
+            overlayImage.src = event.currentTarget.querySelector('img').src;
+            overlay.classList.add('open');
+        }
+        function closeImage(event) {
+            overlay.classList.remove('open');
+        }
+        function shuffle(arr) {
+            // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        let digits = Array.from({length: numberOfRandomSizeImages}, () => [randomNumber(4), randomNumber(4)]);
+        digits = shuffle(digits.concat(Array(numberOfFillerImages).fill([1,1])));
+
+        const html = digits.map(generateHTML).join('');
+        gallery.innerHTML = html;
+
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => item.addEventListener('click', openImage));
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === "Escape") {
+                closeImage(event);
+            }
+        });
+
+        overlayClose.addEventListener('click', closeImage);
+        overlay.addEventListener('click', closeImage);
+    </script>
 </body>
 </html>
