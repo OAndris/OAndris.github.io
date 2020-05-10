@@ -146,8 +146,7 @@
         let pictureData = [...Array(numberOfVerticalImages)].map((_, idx) => [2, 4, 'allo', idx+1]);
         pictureData = pictureData.concat([...Array(numberOfHorizontalImages)].map((_, idx) => [4, 2, 'fekvo', idx+1]));
         pictureData = shuffle(pictureData);
-        const galleryHTML = pictureData.map(generateHTML).join('');
-        gallery.innerHTML = galleryHTML;
+        gallery.innerHTML = pictureData.map(generateHTML).join('');
 
         const items = document.querySelectorAll('.item');
         items.forEach(item => item.addEventListener('click', openImage));
