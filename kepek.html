@@ -120,10 +120,6 @@
                 </div>`;
         }
 
-        function randomNumber(from, to) {
-            return from + (Math.floor(Math.random() * (to-from+1)));
-        }
-
         function openImage(event) {
             overlayImage.src = event.currentTarget.querySelector('img').src;
             overlay.classList.add('open');
