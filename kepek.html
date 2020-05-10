@@ -94,34 +94,45 @@
     <script src="./js/imageSlider.js"></script>
 
     <script>
-        const numberOfRandomSizeImages = 30;
-        const numberOfFillerImages = 150;
+        const numberOfVerticalImages = 7;
+        const numberOfHorizontalImages = 20;
 
         const gallery = document.querySelector('.gallery');
         const overlay = document.querySelector('.overlay');
+        const overlayInner = document.querySelector('.overlay-inner');
         const overlayImage = overlay.querySelector('img');
         const overlayClose = overlay.querySelector('.close');
 
-        function generateHTML([h, v]) {
-            // <img src="images/${randomNumber(12)}.jpg"/>
-            return `
-                <div class="item h${h} v${v}">
-                    <img src="https://picsum.photos/id/${randomNumber(80)}/500/500"/>
+        // ========================
+        function generateHTML([colSpan, rowSpan, layout, num]) {
+            return layout === 'allo'
+                ? `
+                <div class="item h${colSpan} v${rowSpan}">
+                    <img src="images/galeria/allo/${num}.jpg"/>
                     <div class="item__overlay">
                     </div>
-                </div>
-            `;
+                </div>`
+                : `
+                <div class="item h${colSpan} v${rowSpan}">
+                    <img src="images/galeria/fekvo/${num}.jpg"/>
+                    <div class="item__overlay">
+                    </div>
+                </div>`;
         }
-        function randomNumber(limit) {
-            return Math.floor(Math.random() * limit) + 1;
+
+        function randomNumber(from, to) {
+            return from + (Math.floor(Math.random() * (to-from+1)));
         }
+
         function openImage(event) {
             overlayImage.src = event.currentTarget.querySelector('img').src;
             overlay.classList.add('open');
         }
+
         function closeImage(event) {
             overlay.classList.remove('open');
         }
+
         function shuffle(arr) {
             // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
             for (let i = arr.length - 1; i > 0; i--) {
@@ -130,24 +141,24 @@
             }
             return arr;
         }
+        // ========================
 
-        let digits = Array.from({length: numberOfRandomSizeImages}, () => [randomNumber(4), randomNumber(4)]);
-        digits = shuffle(digits.concat(Array(numberOfFillerImages).fill([1,1])));
-
-        const html = digits.map(generateHTML).join('');
-        gallery.innerHTML = html;
+        let pictureData = [...Array(numberOfVerticalImages)].map((_, idx) => [2, 4, 'allo', idx+1]);
+        pictureData = pictureData.concat([...Array(numberOfHorizontalImages)].map((_, idx) => [4, 2, 'fekvo', idx+1]));
+        pictureData = shuffle(pictureData);
+        const galleryHTML = pictureData.map(generateHTML).join('');
+        gallery.innerHTML = galleryHTML;
 
         const items = document.querySelectorAll('.item');
         items.forEach(item => item.addEventListener('click', openImage));
 
+        overlayClose.addEventListener('click', closeImage);
+        overlay.addEventListener('click', closeImage);
         document.addEventListener('keydown', (event) => {
             if (event.key === "Escape") {
                 closeImage(event);
             }
         });
-
-        overlayClose.addEventListener('click', closeImage);
-        overlay.addEventListener('click', closeImage);
     </script>
 </body>
 </html>
