@@ -973,4 +973,8 @@ p {
 a {
   text-decoration: none;
 }
+
+a:visited {
+  color: #EB9605;
+}
 /*# sourceMappingURL=styles.css.map */
