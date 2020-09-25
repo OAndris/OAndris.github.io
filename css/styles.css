@@ -942,6 +942,10 @@ footer #copyright-container {
   color: black;
 }
 
+.text-left * {
+  text-align: left;
+}
+
 .container {
   width: 90%;
   max-width: 48em;
@@ -964,5 +968,9 @@ body {
 p {
   text-align: justify;
   text-justify: auto;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -19,6 +19,10 @@
     }
 }
 
+.text-left * {
+    text-align: left;
+}
+
 .container {
     width: 90%;
     max-width: $max-page-width;
@@ -36,4 +40,8 @@ body {
 p {
     text-align: justify;
     text-justify: auto;
+}
+
+a {
+    text-decoration: none;
 }
