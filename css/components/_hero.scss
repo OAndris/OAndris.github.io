@@ -2,13 +2,14 @@
     text-align: center;
     .slider {
         margin: auto;
-        // max-width: $max-page-width;
         height: 100%;
-        // position: relative;
     }
     img {
         width: 100%;
-        animation: fadein .5s;
+        animation: fadein 1s;
+        &.hidden {
+            display: none;
+        }
     }
     @keyframes fadein {
         0% {opacity: 0;}
