@@ -33,13 +33,13 @@ header nav {
   min-height: 60px;
 }
 
-header nav .logo {
+header nav #logo {
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   height: 100%;
 }
 
-header nav .logo h1 a {
+header nav #logo h1 a {
   text-decoration: none;
   vertical-align: middle;
   color: #555555;
@@ -47,18 +47,25 @@ header nav .logo h1 a {
   font-family: "Open Sans", sans-serif;
 }
 
-header nav .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header nav ul {
   list-style: none;
 }
 
-header nav .nav-list li {
+header nav #nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav #nav-list .sub-list-nested {
+  display: none;
+}
+
+header nav #nav-list li {
   margin-left: 1.25em;
 }
 
-header nav .nav-list a {
+header nav #nav-list a {
   text-decoration: none;
   text-transform: uppercase;
   color: #555555;
@@ -66,25 +73,25 @@ header nav .nav-list a {
   font-size: 0.9375rem;
 }
 
-header nav .nav-list a:hover {
+header nav #nav-list a:hover {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid #555555;
 }
 
-header nav .nav-list a.active {
+header nav #nav-list a.active {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid #555555;
   pointer-events: none;
 }
 
-header nav .burger {
+header nav #burger {
   display: none;
   background: #555555;
   border-radius: 0.25em;
   cursor: pointer;
 }
 
-header nav .burger div {
+header nav #burger div {
   background: #e2e2e2;
   width: 1.75em;
   height: 0.25em;
@@ -94,7 +101,7 @@ header nav .burger div {
 }
 
 @media screen and (max-width: 1150px) {
-  header nav .logo h1 a {
+  header nav #logo h1 a {
     font-size: 1rem;
   }
 }
@@ -103,45 +110,48 @@ header nav .burger div {
   body {
     overflow-x: hidden;
   }
-  header nav .nav-list {
+  header nav #burger {
+    display: block;
+  }
+  header nav ul {
+    text-align: center;
+  }
+  header nav #nav-list {
+    background: white;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     position: absolute;
-    right: 0;
     top: 60px;
-    background: rgba(255, 255, 255, 0.95);
+    right: 0;
+    width: 50%;
+    min-width: 20em;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    min-width: 25%;
   }
-  header nav .nav-list li {
-    margin: 1em 1.5em;
-    text-align: center;
-    opacity: 0;
+  header nav #nav-list li {
+    margin: 0.75em 1.5em;
   }
-  header nav .nav-list a {
+  header nav #nav-list a {
     font-size: 1rem;
+    padding: 0;
   }
-  header nav .burger {
+  header nav #nav-list > li > a {
+    letter-spacing: 4px;
+    font-weight: 600;
+  }
+  header nav #nav-list .sub-list-nested {
     display: block;
   }
-  header nav .js-burger-is-active .line1 {
-    -webkit-transform: rotate(-45deg) translate(-0.375em, 0.375em);
-            transform: rotate(-45deg) translate(-0.375em, 0.375em);
+  header nav #nav-list .sub-list-nested a {
+    text-transform: none;
+    color: #CC7722;
   }
-  header nav .js-burger-is-active .line2 {
-    opacity: 0;
+  header.js-burger-is-active {
+    position: absolute;
   }
-  header nav .js-burger-is-active .line3 {
-    -webkit-transform: rotate(45deg) translate(-0.375em, -0.375em);
-            transform: rotate(45deg) translate(-0.375em, -0.375em);
-  }
-  header nav .js-nav-list-is-active {
+  #nav-list.js-burger-is-active {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
     -webkit-transition: -webkit-transform 0.25s ease-in;
@@ -149,40 +159,31 @@ header nav .burger div {
     transition: transform 0.25s ease-in;
     transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
   }
-  @-webkit-keyframes js-nav-links-appear {
-    from {
-      opacity: 0;
-      -webkit-transform: translateX(50px);
-              transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
+  #burger.js-burger-is-active .line1 {
+    -webkit-transform: rotate(-45deg) translate(-0.375em, 0.375em);
+            transform: rotate(-45deg) translate(-0.375em, 0.375em);
   }
-  @keyframes js-nav-links-appear {
-    from {
-      opacity: 0;
-      -webkit-transform: translateX(50px);
-              transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
+  #burger.js-burger-is-active .line2 {
+    opacity: 0;
+  }
+  #burger.js-burger-is-active .line3 {
+    -webkit-transform: rotate(45deg) translate(-0.375em, -0.375em);
+            transform: rotate(45deg) translate(-0.375em, -0.375em);
   }
 }
 
 @media screen and (max-width: 460px) {
-  header nav .logo h1 a {
+  header nav #logo h1 a {
     font-size: 0.75rem;
+  }
+  header nav #nav-list {
+    width: 100%;
+    min-width: auto;
   }
 }
 
 @media screen and (max-width: 360px) {
-  header nav .logo h1 a {
+  header nav #logo h1 a {
     font-size: 0.625rem;
   }
 }

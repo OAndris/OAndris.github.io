@@ -17,7 +17,7 @@ header {
         justify-content: space-between;
         align-items: center;
         min-height: $header-height;
-        .logo {
+        #logo {
             text-shadow: $logo-text-shadow;
             text-transform: uppercase;
             height: 100%;
@@ -29,9 +29,14 @@ header {
                 font-family: $font-family-logo;
             }
         }
-        .nav-list {
-            display: flex;
+        ul {
             list-style: none;
+        }
+        #nav-list {
+            display: flex;
+            .sub-list-nested {
+                display: none;
+            }
             li {
                 margin-left: 1.25em;
             }
@@ -51,25 +56,26 @@ header {
                     pointer-events: none;
                 }
             }
+
         }
-        .burger {
+        #burger {
             display: none;
             background: $burger-bg-color;
             border-radius: 0.25em;
             cursor: pointer;
             div {
-               background: $burger-color;
-               width: 1.75em;
-               height: 0.25em;
-               margin: 0.375em;
-               transition: all 0.1s ease;
-           }
+                background: $burger-color;
+                width: 1.75em;
+                height: 0.25em;
+                margin: 0.375em;
+                transition: all 0.1s ease;
+            }
         }
     }
 }
 
 @media screen and (max-width: 1150px) {
-    header nav .logo h1 a {
+    header nav #logo h1 a {
         font-size: 1rem;
     }
 }
@@ -79,59 +85,75 @@ header {
         overflow-x: hidden;
     }
     header nav {
-        .nav-list {
+        #burger {
+            display: block;
+        }
+        ul {
+            text-align: center;
+        }
+        #nav-list {
+            background: white;
             flex-direction: column;
-            align-items: center;
             position: absolute;
-            right: 0;
             top: $header-height;
-            background: $header-bg-color;
+            right: 0;
+            width: 50%;
+            min-width: 20em;
             transform: translateX(100%);
-            min-width: 25%;
             li {
-                margin: 1em 1.5em;
-                text-align: center;
-                opacity: 0;
-                // animation: js-nav-links-appear 0.5s ease forwards 1s;
+                margin: 0.75em 1.5em;
             }
             a {
                 font-size: 1rem;
+                padding: 0;
+            }
+            & > li > a {
+                letter-spacing: 4px;
+                font-weight: 600;
+            }
+            .sub-list-nested {
+                display: block;
+                a {
+                    text-transform: none;
+                    color: $color--ochre;
+                }
             }
         }
-        .burger {
-            display: block;
+    }
+    // Toggle burger (class toggled by JavaScript):
+    header.js-burger-is-active {
+        position: absolute;
+    }
+    #nav-list.js-burger-is-active {
+        transform: translateX(0%);
+        transition: transform 0.25s ease-in;
+    }
+    #burger.js-burger-is-active {
+        .line1 {
+            transform: rotate(-45deg) translate(-0.375em, 0.375em);
         }
-
-        // JavaScript-only classes:
-        .js-burger-is-active {
-            .line1 {transform: rotate(-45deg) translate(-0.375em, 0.375em);}
-            .line2 {opacity: 0;}
-            .line3 {transform: rotate(45deg) translate(-0.375em, -0.375em);}
+        .line2 {
+            opacity: 0;
         }
-        .js-nav-list-is-active {
-            transform: translateX(0%);
-            transition: transform 0.25s ease-in;
-        }
-        @keyframes js-nav-links-appear {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0px);
-            }
+        .line3 {
+            transform: rotate(45deg) translate(-0.375em, -0.375em);
         }
     }
 }
 
 @media screen and (max-width: 460px) {
-    header nav .logo h1 a {
-        font-size: 0.75rem;
+    header nav {
+        #logo h1 a {
+            font-size: 0.75rem;
+        }
+        #nav-list {
+            width: 100%;
+            min-width: auto;
+        }
     }
 }
 @media screen and (max-width: 360px) {
-    header nav .logo h1 a {
+    header nav #logo h1 a {
         font-size: 0.625rem;
     }
 }
