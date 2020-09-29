@@ -37,8 +37,21 @@ header {
             .sub-list-nested {
                 display: none;
             }
-            li {
+            & > li {
                 margin-left: 1.25em;
+                &:hover {
+                    .sub-list-nested {
+                        display: block;
+                        background-color: $header-bg-color;
+                        position: absolute;
+                        li {
+                            margin: 1.5em;
+                        }
+                        a {
+                            padding: 0;
+                        }
+                    }
+                }
             }
             a {
                 text-decoration: none;
@@ -56,7 +69,6 @@ header {
                     pointer-events: none;
                 }
             }
-
         }
         #burger {
             display: none;
@@ -94,11 +106,11 @@ header {
         #nav-list {
             background: white;
             flex-direction: column;
+            width: 50%;
+            min-width: 20em;
             position: absolute;
             top: $header-height;
             right: 0;
-            width: 50%;
-            min-width: 20em;
             transform: translateX(100%);
             li {
                 margin: 0.75em 1.5em;
@@ -110,6 +122,14 @@ header {
             & > li > a {
                 letter-spacing: 4px;
                 font-weight: 600;
+            }
+            & > li:hover {
+                .sub-list-nested {
+                    position: relative;
+                    li {
+                        margin: 0.75em 1.5em;
+                    }
+                }
             }
             .sub-list-nested {
                 display: block;

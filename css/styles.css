@@ -61,8 +61,22 @@ header nav #nav-list .sub-list-nested {
   display: none;
 }
 
-header nav #nav-list li {
+header nav #nav-list > li {
   margin-left: 1.25em;
+}
+
+header nav #nav-list > li:hover .sub-list-nested {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+}
+
+header nav #nav-list > li:hover .sub-list-nested li {
+  margin: 1.5em;
+}
+
+header nav #nav-list > li:hover .sub-list-nested a {
+  padding: 0;
 }
 
 header nav #nav-list a {
@@ -122,11 +136,11 @@ header nav #burger div {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 50%;
+    min-width: 20em;
     position: absolute;
     top: 60px;
     right: 0;
-    width: 50%;
-    min-width: 20em;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
@@ -140,6 +154,12 @@ header nav #burger div {
   header nav #nav-list > li > a {
     letter-spacing: 4px;
     font-weight: 600;
+  }
+  header nav #nav-list > li:hover .sub-list-nested {
+    position: relative;
+  }
+  header nav #nav-list > li:hover .sub-list-nested li {
+    margin: 0.75em 1.5em;
   }
   header nav #nav-list .sub-list-nested {
     display: block;
