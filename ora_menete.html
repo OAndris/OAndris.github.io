@@ -12,33 +12,11 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h1><a href="./index.html">Kovács Kinga - Alexander-technika tanár</a></h1>
-            </div>
-            <ul class="nav-list">
-                <li><a href="./alexander_technika.html">Alexander-technika</a></li>
-                <li><a class="active" href="./foglalkozasrol.html">A foglalkozásról</a></li>
-                <li><a href="./rolam.html">Rólam</a></li>
-                <li><a href="./media.html">Média</a></li>
-                <li><a href="./hirek.html">Hírek</a></li>
-                <li><a href="./kapcsolat.html">Kapcsolat</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
+    <header id="injectedHeader"></header>
 
     <section id="szeles_sav">
-        <img src="./images/szeles_sav/kicsi2.jpg" alt="">
+        <img src="./images/szeles_sav/kicsi8.jpg" alt="">
     </section>
-
 
     <main class="container">
         <section>
@@ -46,33 +24,12 @@
             <p class="text-indent">Az Alexander-technika elsajátítása egy tanulási folyamat, mely egyéni órák keretén belül zajlik. A tanár érintés és tükrök segítségével megfigyeli növendékének fekvő helyzetben és mozgás közben megnyilvánuló megszokásait és izomfeszültségeit. Érintésével és szóbeli instrukciókkal felhívja a tanítvány figyelmét ezekre a fölösleges feszítésekre.</p>
             <p class="text-indent">A módszer tanulásának eredményeképp a növendék megtanulja figyelmét úgy irányítani, hogy önállóan is felismerje és elengedje nemkívánt feszítéseit. Egy átlagos felnőttnél hozzávetőlegesen 30 gyakorlati óra elegendő a módszer elsajátítására, melyeken az eredményes fejlődés érdekében heti rendszerességgel javasolt részt venni. Célszerű kényelmes, meleg öltözékben érkezni a szabad mozgás lehetőségének érdekében.</p>
         </section>
-        <section>
-            <h2>Árak</h2>
-            <p>Egy foglalkozás ára <strong>8000 ft (45 perc)</strong>.</p>
-            <p>Diákoknak és pedagógusoknak kedvezményesen <strong>6000 Ft (45 perc)</strong>.</p>
-        </section>
     </main>
 
-
-    <!-- SOCIAL SIDE -->
-    <aside id="social-side">
-        <a href="https://www.facebook.com/kovacs.kinga.alexander.technika.zenesz/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <!-- <a href="https://www.youtube.com/playlist?list=LL4Zb1XyBxQL3juwguKPPjtQ" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a> -->
-    </aside>
-
-
-    <!-- FOOTER -->
+    <aside id="social-side"></aside>
     <footer id="injectedFooter"></footer>
-
-
-    <!-- SCRIPTS -->
-    <script src="./js/header.js"></script>
-    
     <script src="assets/jquery/jquery-3.5.1.min.js"></script>
-    <script src="./js/injectFooter.js"></script>
+    <script src="./js/injectHtml.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 </html>

@@ -12,65 +12,8 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <header id="injectedHeader"></header>
 
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div id="logo">
-                <h1><a href="./index.html">Kovács Kinga - Alexander-technika tanár</a></h1>
-            </div>
-
-            <ul id="nav-list">
-                <li>
-                    <a href="">Alexander-technika</a>
-                    <ul class="sub-list-nested">
-                        <li><a href="./modszerrol.html">A módszerről</a></li>
-                        <li><a href="./modszer_megalkotojarol.html">A módszer megalkotójáról</a></li>
-                        <li><a href="./kinek_ajanlom.html">Kinek ajánlom</a></li>
-                        <li><a href="./hires_novendekek.html">Híres növendékek</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">A foglalkozásról</a>
-                    <ul class="sub-list-nested">
-                        <li><a href="./ora_menete.html">Az óra menete</a></li>
-                        <li><a href="./arak.html">Árak</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">Rólam</a>
-                    <ul class="sub-list-nested">
-                        <li><a href="">Életrajz</a></li>
-                        <li><a href="">Növendékeim mondták</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">Média</a>
-                    <ul class="sub-list-nested">
-                        <li><a href="">Fotók</a></li>
-                        <li><a href="">Videók</a></li>
-                        <li><a href="">Letölthető dokumentumok</a></li>
-                        <li><a href="">Ajánlott szakirodalom</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./hirek.html">Hírek</a>
-                </li>
-                <li>
-                    <a href="./kapcsolat.html">Kapcsolat</a>
-                </li>
-            </ul>
-
-            <div id="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
-
-    <!-- HERO IMAGE SLIDER -->
     <section id="hero">
         <div class="slider">
             <h2>Tudatos testhasználat,<br>könnyed mozgás</h2>
@@ -91,27 +34,12 @@
         </div>
     </section>
 
-
-    <!-- SOCIAL SIDE -->
-    <aside id="social-side">
-        <a href="https://www.facebook.com/kovacs.kinga.alexander.technika.zenesz/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <!-- <a href="https://www.youtube.com/playlist?list=LL4Zb1XyBxQL3juwguKPPjtQ" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a> -->
-    </aside>
-
-
-    <!-- FOOTER -->
+    <aside id="social-side"></aside>
     <footer id="injectedFooter"></footer>
-
-
-    <!-- SCRIPTS -->
-    <script src="./js/header.js"></script>
-    <script src="./js/imageSlider.js"></script>
-
     <script src="assets/jquery/jquery-3.5.1.min.js"></script>
-    <script src="./js/injectFooter.js"></script>
+    <script src="./js/injectHtml.js"></script>
+    <script src="./js/header.js"></script>
+
+    <script src="./js/imageSlider.js"></script>
 </body>
 </html>
