@@ -22,6 +22,6 @@
     </section>
 </div>
 <div id="copyright-container">
-    <p><strong>Kovács Kinga &copy; 2020 - Alexander-technika tanár</strong></p>
-    <!-- <p><strong>Kovács Kinga &copy; <script>document.write(new Date().getFullYear())</script> - Alexander-technika tanár</strong></p> -->
+    <p><strong>Kovács Kinga &copy; <span id="generatedYear"></span> - Alexander-technika tanár</strong></p>
+    <script>document.querySelector("#generatedYear").innerHTML = new Date().getFullYear()</script>
 </div>
