@@ -79,6 +79,10 @@ header nav #nav-list > li:hover .sub-list-nested a {
   padding: 0;
 }
 
+header nav #nav-list .nav-item-not-clickable {
+  pointer-events: none;
+}
+
 header nav #nav-list a {
   text-decoration: none;
   text-transform: uppercase;
