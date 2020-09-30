@@ -153,13 +153,13 @@ header {
     }
     #burger.js-burger-is-active {
         .line1 {
-            transform: rotate(-45deg) translate(-0.375em, 0.375em);
+            transform: rotate(-45deg) translate(-0.4em, 0.4em);
         }
         .line2 {
             opacity: 0;
         }
         .line3 {
-            transform: rotate(45deg) translate(-0.375em, -0.375em);
+            transform: rotate(45deg) translate(-0.4em, -0.4em);
         }
     }
 }

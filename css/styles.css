@@ -184,15 +184,15 @@ header nav #burger div {
     transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
   }
   #burger.js-burger-is-active .line1 {
-    -webkit-transform: rotate(-45deg) translate(-0.375em, 0.375em);
-            transform: rotate(-45deg) translate(-0.375em, 0.375em);
+    -webkit-transform: rotate(-45deg) translate(-0.4em, 0.4em);
+            transform: rotate(-45deg) translate(-0.4em, 0.4em);
   }
   #burger.js-burger-is-active .line2 {
     opacity: 0;
   }
   #burger.js-burger-is-active .line3 {
-    -webkit-transform: rotate(45deg) translate(-0.375em, -0.375em);
-            transform: rotate(45deg) translate(-0.375em, -0.375em);
+    -webkit-transform: rotate(45deg) translate(-0.4em, -0.4em);
+            transform: rotate(45deg) translate(-0.4em, -0.4em);
   }
 }
 
