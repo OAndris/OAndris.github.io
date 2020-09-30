@@ -208,7 +208,6 @@ main {
 // Velemenyek:
 #velemenyek {
     div {
-        background: rgb(238, 238, 238);
         border-radius: 0.75em;
         width: 90%;
         margin: 1.5em auto;
@@ -220,6 +219,16 @@ main {
         p {
             text-align: center;
         }
+        blockquote + p {
+            color: $color--honey;
+            font-weight: 600;
+        }
+    }
+    hr {
+        background: $color--honey;
+        height: 3px;
+        width: 80%;
+        margin: auto;
     }
     $quote-size: 1.675rem;
     $quote-margin: 1.5em;

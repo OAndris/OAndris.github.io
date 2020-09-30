@@ -579,7 +579,6 @@ main .text-indent::first-line {
 }
 
 #velemenyek div {
-  background: #eeeeee;
   border-radius: 0.75em;
   width: 90%;
   margin: 1.5em auto;
@@ -593,6 +592,18 @@ main .text-indent::first-line {
 #velemenyek div blockquote p,
 #velemenyek div p {
   text-align: center;
+}
+
+#velemenyek div blockquote + p {
+  color: #EB9605;
+  font-weight: 600;
+}
+
+#velemenyek hr {
+  background: #EB9605;
+  height: 3px;
+  width: 80%;
+  margin: auto;
 }
 
 #velemenyek blockquote:before,
