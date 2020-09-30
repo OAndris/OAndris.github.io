@@ -51,11 +51,16 @@ footer {
         background: $copyright-bg-color;
         color: $copyright-color;
         padding: 1.25em;
-        font-size: 0.75rem;
+        font-size: 0.625rem;
         text-transform: uppercase;
     }
 }
 
+@media screen and (min-width: 480px) {
+    footer #copyright-container {
+        font-size: 0.75rem;
+    }
+}
 
 @media screen and (min-width: 950px) {
     footer {

@@ -164,10 +164,10 @@ header {
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
     header nav {
         #logo h1 a {
-            font-size: 0.75rem;
+            font-size: 0.6875rem;
         }
         #nav-list {
             width: 100%;

@@ -196,9 +196,9 @@ header nav #burger div {
   }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   header nav #logo h1 a {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
   }
   header nav #nav-list {
     width: 100%;
@@ -805,8 +805,14 @@ footer #copyright-container {
   background: black;
   color: #636363;
   padding: 1.25em;
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 480px) {
+  footer #copyright-container {
+    font-size: 0.75rem;
+  }
 }
 
 @media screen and (min-width: 950px) {
