@@ -36,6 +36,7 @@ header {
             display: flex;
             .sub-list-nested {
                 display: none;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
             }
             & > li {
                 margin-left: 1.25em;
@@ -108,6 +109,7 @@ header {
         }
         #nav-list {
             background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             flex-direction: column;
             width: 50%;
             min-width: 20em;
@@ -136,6 +138,7 @@ header {
             }
             .sub-list-nested {
                 display: block;
+                box-shadow: none;
                 a {
                     text-transform: none;
                     color: $color--ochre;

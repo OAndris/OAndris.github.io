@@ -59,6 +59,8 @@ header nav #nav-list {
 
 header nav #nav-list .sub-list-nested {
   display: none;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 header nav #nav-list > li {
@@ -136,6 +138,8 @@ header nav #burger div {
   }
   header nav #nav-list {
     background: white;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -167,6 +171,8 @@ header nav #burger div {
   }
   header nav #nav-list .sub-list-nested {
     display: block;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   header nav #nav-list .sub-list-nested a {
     text-transform: none;
