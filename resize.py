@@ -1,7 +1,7 @@
 from PIL import Image, ImageFilter
 import os
 
-folder = "./images/galeria/allo"
+folder = "./assets/images/galeria/allo"
 new_width = 1280
 
 files = os.listdir(folder)
