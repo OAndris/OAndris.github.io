@@ -596,7 +596,7 @@ main .text-indent::first-line {
 
 #velemenyek div blockquote + p {
   color: #EB9605;
-  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 #velemenyek hr {
