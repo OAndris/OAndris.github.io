@@ -58,9 +58,16 @@ main {
 .iframe-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    margin: 1.5em auto;
-    height: 360px;
+    &.video {
+        max-width: 500px;
+        margin: 1.5em auto;
+        height: 360px;
+    }
+    &.map {
+        max-width: 700px;
+        margin: 1.5em auto;
+        height: 450px;
+    }
     iframe {
         position: absolute;
         top: 0;

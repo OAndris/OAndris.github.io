@@ -366,9 +366,18 @@ main .text-indent::first-line {
 .iframe-container {
   position: relative;
   width: 100%;
+}
+
+.iframe-container.video {
   max-width: 500px;
   margin: 1.5em auto;
   height: 360px;
+}
+
+.iframe-container.map {
+  max-width: 700px;
+  margin: 1.5em auto;
+  height: 450px;
 }
 
 .iframe-container iframe {
