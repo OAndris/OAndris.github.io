@@ -1,20 +1,5 @@
 #hero {
     text-align: center;
-    .slider {
-        margin: auto;
-        height: 100%;
-    }
-    img {
-        width: 100%;
-        animation: fadein 1s;
-        &.hidden {
-            display: none;
-        }
-    }
-    @keyframes fadein {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-    }
     h2 {
         z-index: 1;
         position: absolute;
@@ -44,17 +29,43 @@
             color: $color--supernova;
         }
     }
+    .slider .slided {
+        img {
+            width: 100%;
+            animation: fadein 1s;
+        }
+        @keyframes fadein {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        p {
+            position: sticky;
+            bottom: 0px;
+            font-size: 0.875rem;
+            font-style: italic;
+            text-shadow: 1px 1px black;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.75);
+            padding: 0.125em 0.5em;
+            color: $color--golden-dream;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
 }
 
 @media screen and (min-width: 480px) {
     #hero {
         h2 {font-size: 2.5vw;}
+        .slider .slided p {font-size: 2.92vw;}
         button {font-size: 2.92vw;}
     }
 }
 @media screen and (min-width: 960px) {
     #hero {
         h2 {font-size: 1.5rem;}
+        .slider .slided p {font-size: 1.75rem;}
         button {font-size: 1.75rem;}
     }
 }

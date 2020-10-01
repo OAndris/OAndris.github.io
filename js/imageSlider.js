@@ -4,7 +4,7 @@ const imgSlider = () => {
     const initialWaitTime = 0;
     const slidingWaitTime = 5000;
 
-    const imageElements = document.querySelectorAll('#hero div.slider img');
+    const imageElements = document.querySelectorAll('#hero .slider .slided');
     let currentImage = firstImage + 1; // initially, switch directly to second image (skip switching from first to first)
 
     const slide = () => {
