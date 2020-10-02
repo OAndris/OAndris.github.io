@@ -45,6 +45,11 @@ header {
                         display: block;
                         background-color: $header-bg-color;
                         position: absolute;
+                        animation: fadein 0.4s;
+                        @keyframes fadein {
+                            0% {opacity: 0;}
+                            100% {opacity: 1;}
+                        }
                         li {
                             margin: 1.5em;
                         }
@@ -131,6 +136,7 @@ header {
             & > li:hover {
                 .sub-list-nested {
                     position: relative;
+                    animation: none;
                     li {
                         margin: 0.75em 1.5em;
                     }
