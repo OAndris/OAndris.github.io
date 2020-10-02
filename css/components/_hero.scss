@@ -1,32 +1,35 @@
+@mixin general-style {
+    z-index: 1;
+    position: absolute;
+    text-align: left;
+    padding: 0.125em 0.375em;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: $hero-slogan-color;
+    background: $hero-slogan-bg-color;
+    text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
+}
+
 #hero {
     text-align: center;
+    position: relative;
     h2 {
-        z-index: 1;
-        position: absolute;
-        top: $header-height;
-        text-align: left;
-        padding: 0.125em 0.375em;
+        @include general-style;
+        top: 0;
+        left: 0;
         border-radius: 0 0 0.75em 0;
-        font-size: 0.75rem;
-        font-style: italic;
-        color: $hero-slogan-color;
-        background: $hero-slogan-bg-color;
-        text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
     }
     button {
-        position: fixed;
-        top: $header-height;
-        right: 0px;
-        padding: 0.25em 0.5em;
-        border: 0px solid black;
-        border-radius: 0 0 0 0.5em;
-        background: $hero-button-bg-color;
-        font-size: 0.875rem;
-        color: $hero-button-color;
-        text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
+        @include general-style;
+        bottom: 6px;
+        right: 0;
+        border-radius: 0.75em 0 0 0;
+        border: none;
         cursor: pointer;
+        border: 1px solid $hero-slogan-bg-color;
         &:hover {
-            color: $color--supernova;
+            background: white;
+            border: 1px solid $hero-slogan-color;
         }
     }
     .slider .slided {
@@ -39,15 +42,17 @@
             100% {opacity: 1;}
         }
         p {
-            position: sticky;
-            bottom: 0px;
-            font-size: 0.875rem;
-            font-style: italic;
-            text-shadow: 1px 1px black;
-            text-align: center;
-            background-color: rgba(128, 128, 128, 0.75);
-            padding: 0.125em 0.5em;
-            color: $color--golden-dream;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            padding: 0.25em 0.5em;
+            border: 0px solid black;
+            border-radius: 0 0 0 0.5em;
+            background: $hero-button-bg-color;
+            font-size: 0.75rem;
+            color: $hero-button-color;
+            text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
+            display: none;
         }
         &.hidden {
             display: none;
@@ -57,15 +62,32 @@
 
 @media screen and (min-width: 480px) {
     #hero {
-        h2 {font-size: 2.5vw;}
-        .slider .slided p {font-size: 2.92vw;}
-        button {font-size: 2.92vw;}
+        h2 {
+            font-size: 2.5vw;
+        }
+        button {
+            font-size: 2.92vw;
+        }
     }
 }
 @media screen and (min-width: 960px) {
     #hero {
-        h2 {font-size: 1.5rem;}
-        .slider .slided p {font-size: 1.75rem;}
-        button {font-size: 1.75rem;}
+        h2 {
+            font-size: 1.5rem;
+        }
+        button {
+            font-size: 1.75rem;
+        }
+    }
+}
+@media screen and (min-width: 1050px) {
+    #hero .slider .slided p {
+        font-size: 1.3125rem;
+        display: block;
+    }
+}
+@media screen and (min-width: 1300px) {
+    #hero .slider .slided p {
+        font-size: 1.75rem;
     }
 }

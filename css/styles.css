@@ -220,38 +220,45 @@ header nav #burger div {
 
 #hero {
   text-align: center;
+  position: relative;
 }
 
 #hero h2 {
   z-index: 1;
   position: absolute;
-  top: 60px;
   text-align: left;
   padding: 0.125em 0.375em;
-  border-radius: 0 0 0.75em 0;
   font-size: 0.75rem;
   font-style: italic;
   color: black;
   background: #ffc701;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0.75em 0;
 }
 
 #hero button {
-  position: fixed;
-  top: 60px;
-  right: 0px;
-  padding: 0.25em 0.5em;
-  border: 0px solid black;
-  border-radius: 0 0 0 0.5em;
-  background: #808080;
-  font-size: 0.875rem;
-  color: #e2e2e2;
+  z-index: 1;
+  position: absolute;
+  text-align: left;
+  padding: 0.125em 0.375em;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: black;
+  background: #ffc701;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+  bottom: 6px;
+  right: 0;
+  border-radius: 0.75em 0 0 0;
+  border: none;
   cursor: pointer;
+  border: 1px solid #ffc701;
 }
 
 #hero button:hover {
-  color: #ffc701;
+  background: white;
+  border: 1px solid black;
 }
 
 #hero .slider .slided img {
@@ -279,16 +286,17 @@ header nav #burger div {
 }
 
 #hero .slider .slided p {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0px;
-  font-size: 0.875rem;
-  font-style: italic;
-  text-shadow: 1px 1px black;
-  text-align: center;
-  background-color: rgba(128, 128, 128, 0.75);
-  padding: 0.125em 0.5em;
-  color: #F4D72E;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  padding: 0.25em 0.5em;
+  border: 0px solid black;
+  border-radius: 0 0 0 0.5em;
+  background: #808080;
+  font-size: 0.75rem;
+  color: #e2e2e2;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 #hero .slider .slided.hidden {
@@ -299,9 +307,6 @@ header nav #burger div {
   #hero h2 {
     font-size: 2.5vw;
   }
-  #hero .slider .slided p {
-    font-size: 2.92vw;
-  }
   #hero button {
     font-size: 2.92vw;
   }
@@ -311,10 +316,20 @@ header nav #burger div {
   #hero h2 {
     font-size: 1.5rem;
   }
-  #hero .slider .slided p {
+  #hero button {
     font-size: 1.75rem;
   }
-  #hero button {
+}
+
+@media screen and (min-width: 1050px) {
+  #hero .slider .slided p {
+    font-size: 1.3125rem;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #hero .slider .slided p {
     font-size: 1.75rem;
   }
 }
