@@ -247,14 +247,14 @@ header nav #burger div {
 
 #hero h2 {
   z-index: 1;
-  position: absolute;
   text-align: left;
   padding: 0.125em 0.375em;
   font-size: 0.75rem;
-  font-style: italic;
   color: black;
   background: #ffc701;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  font-style: italic;
   top: 0;
   left: 0;
   border-radius: 0 0 0.75em 0;
@@ -262,25 +262,31 @@ header nav #burger div {
 
 #hero button {
   z-index: 1;
-  position: absolute;
   text-align: left;
   padding: 0.125em 0.375em;
   font-size: 0.75rem;
-  font-style: italic;
   color: black;
   background: #ffc701;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
-  bottom: 6px;
-  right: 0;
-  border-radius: 0.75em 0 0 0;
-  border: none;
   cursor: pointer;
-  border: 1px solid #ffc701;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 5px;
+  margin: calc(0.25em - 6px) auto 0.25em auto;
+  padding: 0.0675em 0.5em;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10em;
+  -webkit-box-shadow: 0 0 3px black;
+          box-shadow: 0 0 3px black;
+  letter-spacing: 1px;
+  background: radial-gradient(#ffe99a, #ffc701);
 }
 
 #hero button:hover {
   background: white;
-  border: 1px solid black;
+  color: #ffc701;
+  font-weight: 600;
+  border: 2px solid #ffc701;
 }
 
 #hero .slider .slided img {
@@ -301,12 +307,13 @@ header nav #burger div {
 #hero .slider .slided p {
   position: absolute;
   top: 0;
-  right: 0px;
+  right: 0;
   padding: 0.25em 0.5em;
   border: 0px solid black;
   border-radius: 0 0 0 0.5em;
   background: #808080;
   font-size: 0.75rem;
+  font-style: italic;
   color: #e2e2e2;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
   display: none;
@@ -343,7 +350,7 @@ header nav #burger div {
 
 @media screen and (min-width: 1300px) {
   #hero .slider .slided p {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 

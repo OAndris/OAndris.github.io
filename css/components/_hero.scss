@@ -1,10 +1,8 @@
 @mixin general-style {
     z-index: 1;
-    position: absolute;
     text-align: left;
     padding: 0.125em 0.375em;
     font-size: 0.75rem;
-    font-style: italic;
     color: $hero-slogan-color;
     background: $hero-slogan-bg-color;
     text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
@@ -15,21 +13,29 @@
     position: relative;
     h2 {
         @include general-style;
+        position: absolute;
+        font-style: italic;
         top: 0;
         left: 0;
         border-radius: 0 0 0.75em 0;
     }
     button {
         @include general-style;
-        bottom: 6px;
-        right: 0;
-        border-radius: 0.75em 0 0 0;
-        border: none;
         cursor: pointer;
-        border: 1px solid $hero-slogan-bg-color;
+        position: sticky;
+        bottom: 5px;
+        margin: calc(0.25em - 6px) auto 0.25em auto;
+        padding: 0.0675em 0.5em;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        border-radius: 10em;
+        box-shadow: 0 0 3px $hero-slogan-color;
+        letter-spacing: 1px;
+        background: radial-gradient(lighten($hero-slogan-bg-color, 30%), $hero-slogan-bg-color);
         &:hover {
             background: white;
-            border: 1px solid $hero-slogan-color;
+            color: $hero-slogan-bg-color;
+            font-weight: 600;
+            border: 2px solid $hero-slogan-bg-color;
         }
     }
     .slider .slided {
@@ -44,12 +50,13 @@
         p {
             position: absolute;
             top: 0;
-            right: 0px;
+            right: 0;
             padding: 0.25em 0.5em;
             border: 0px solid black;
             border-radius: 0 0 0 0.5em;
             background: $hero-button-bg-color;
             font-size: 0.75rem;
+            font-style: italic;
             color: $hero-button-color;
             text-shadow: -1px 0 rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2), 1px 0 rgba(0,0,0,0.2), 0 -1px rgba(0,0,0,0.2);
             display: none;
@@ -88,6 +95,6 @@
 }
 @media screen and (min-width: 1300px) {
     #hero .slider .slided p {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 }
