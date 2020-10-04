@@ -2,6 +2,7 @@ const imgSlider = () => {
     const firstSlide = 0;
     const lastSlide = 12; // NOTE: keep it synchronized with index.html
     const slidingWaitTime = 5000;
+    const restartWaitTime = 5000;
 
     const slidedElements = document.querySelectorAll('#hero .slider .slided');
     const nextButton = document.querySelector('#next');
@@ -28,13 +29,17 @@ const imgSlider = () => {
     nextButton.addEventListener('click', () => {
         window.clearInterval(interval);
         slideForwards();
-        interval = setInterval(slideForwards, slidingWaitTime);
+        setTimeout(() => {
+            interval = setInterval(slideForwards, slidingWaitTime);
+        }, restartWaitTime);
     });
 
     prevButton.addEventListener('click', () => {
         window.clearInterval(interval);
         slideBackwards();
-        interval = setInterval(slideForwards, slidingWaitTime);
+        setTimeout(() => {
+            interval = setInterval(slideForwards, slidingWaitTime);
+        }, restartWaitTime);
     });
 };
 
