@@ -23,16 +23,18 @@ const imgSlider = () => {
         currSlide = prevSlide;
     };
 
-    const interval = setInterval(slideForwards, slidingWaitTime);
+    let interval = setInterval(slideForwards, slidingWaitTime);
 
     nextButton.addEventListener('click', () => {
         window.clearInterval(interval);
         slideForwards();
+        interval = setInterval(slideForwards, slidingWaitTime);
     });
 
     prevButton.addEventListener('click', () => {
         window.clearInterval(interval);
         slideBackwards();
+        interval = setInterval(slideForwards, slidingWaitTime);
     });
 };
 
