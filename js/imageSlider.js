@@ -2,20 +2,32 @@ const imgSlider = () => {
     const firstImage = 0;
     const lastImage = 12; // NOTE: keep it synchronized with index.html
     const initialWaitTime = 0;
-    const slidingWaitTime = 1000;
+    const slidingWaitTime = 5000;
 
     const imageElements = document.querySelectorAll('#hero .slider .slided');
-    let currentImage = firstImage + 1; // initially, switch directly to second image (skip switching from first to first)
+    const nextButton = document.querySelector('#next');
+    const prevButton = document.querySelector('#prev');
 
-    const slide = () => {
-        const previousImage = currentImage === 0 ? lastImage : currentImage - 1;
-        imageElements[currentImage].classList.toggle('hidden'); // show
-        imageElements[previousImage].classList.toggle('hidden'); // hide
-        currentImage = currentImage < lastImage ? currentImage + 1 : firstImage;
+    let currImage = firstImage;
+
+    const slideForwards = () => {
+        const nextImage = currImage < lastImage ? currImage + 1 : firstImage;
+        imageElements[currImage].classList.toggle('hidden'); // hide
+        imageElements[nextImage].classList.toggle('hidden'); // show
+        currImage = nextImage;
     };
 
+    const slideBackwards = () => {
+        const prevImage = currImage > firstImage ? currImage - 1 : lastImage;
+        imageElements[currImage].classList.toggle('hidden'); // hide
+        imageElements[prevImage].classList.toggle('hidden'); // show
+        currImage = prevImage;
+    };
+
+    nextButton.addEventListener('click', () => slideForwards());
+    prevButton.addEventListener('click', () => slideBackwards());
     setTimeout(() => {
-        setInterval(slide, slidingWaitTime);
+        setInterval(slideForwards, slidingWaitTime);
     }, initialWaitTime);
 };
 

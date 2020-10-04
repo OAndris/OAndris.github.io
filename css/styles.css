@@ -8,7 +8,7 @@ header {
   height: 60px;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 999;
 }
 
 header * {
@@ -260,7 +260,38 @@ header nav #burger div {
   border-radius: 0 0 0.75em 0;
 }
 
-#hero button {
+#hero a.slider-nav {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  height: 50px;
+  width: 45px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#hero a.slider-nav#prev {
+  left: 0;
+  background-image: url("../../assets/widgets/arrow_left_white.svg");
+}
+
+#hero a.slider-nav#next {
+  right: 0;
+  background-image: url("../../assets/widgets/arrow_right_white.svg");
+}
+
+#hero a.slider-nav#prev:hover {
+  background-color: white;
+  background-image: url("../../assets/widgets/arrow_left.svg");
+}
+
+#hero a.slider-nav#next:hover {
+  background-color: white;
+  background-image: url("../../assets/widgets/arrow_right.svg");
+}
+
+#hero button#idopontfoglalas {
   z-index: 1;
   text-align: left;
   padding: 0.125em 0.375em;
@@ -282,7 +313,7 @@ header nav #burger div {
   background: radial-gradient(#ffe99a, #ffc701);
 }
 
-#hero button:hover {
+#hero button#idopontfoglalas:hover {
   background: white;
   color: #ffc701;
   font-weight: 600;
@@ -327,8 +358,14 @@ header nav #burger div {
   #hero h2 {
     font-size: 2.5vw;
   }
-  #hero button {
+  #hero button#idopontfoglalas {
     font-size: 2.92vw;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  a.slider-nav {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -336,7 +373,7 @@ header nav #burger div {
   #hero h2 {
     font-size: 1.5rem;
   }
-  #hero button {
+  #hero button#idopontfoglalas {
     font-size: 1.75rem;
   }
 }

@@ -19,7 +19,33 @@
         left: 0;
         border-radius: 0 0 0.75em 0;
     }
-    button {
+    a.slider-nav {
+        position: absolute;
+        top: 40%;
+        z-index: 1;
+        height: 50px;
+        width: 45px;
+        &#prev {
+            left: 0;
+            background-image: url('../../assets/widgets/arrow_left_white.svg');
+        }
+        &#next {
+            right: 0;
+            background-image: url('../../assets/widgets/arrow_right_white.svg');
+        }
+        &#prev:hover {
+            background-color: white;
+            background-image: url('../../assets/widgets/arrow_left.svg');
+        }
+        &#next:hover {
+            background-color: white;
+            background-image: url('../../assets/widgets/arrow_right.svg');
+        }
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    button#idopontfoglalas {
         @include general-style;
         cursor: pointer;
         position: sticky;
@@ -72,9 +98,14 @@
         h2 {
             font-size: 2.5vw;
         }
-        button {
+        button#idopontfoglalas {
             font-size: 2.92vw;
         }
+    }
+}
+@media screen and (min-width: 600px) {
+    a.slider-nav {
+        background-color: rgba(0, 0, 0, 0.3);
     }
 }
 @media screen and (min-width: 960px) {
@@ -82,7 +113,7 @@
         h2 {
             font-size: 1.5rem;
         }
-        button {
+        button#idopontfoglalas {
             font-size: 1.75rem;
         }
     }
