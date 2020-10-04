@@ -24,22 +24,29 @@ const imgSlider = () => {
         currSlide = prevSlide;
     };
 
-    let interval = setInterval(slideForwards, slidingWaitTime);
+    const startSliding = () => {
+        return setInterval(slideForwards, slidingWaitTime);
+    };
+
+    const restartWithDelay = () => {
+        window.clearInterval(interval);
+        window.clearTimeout(timeout);
+        return setTimeout(() => {
+            interval = startSliding();
+        }, restartWaitTime);
+    };
+
+    let interval = startSliding();
+    let timeout;
 
     nextButton.addEventListener('click', () => {
-        window.clearInterval(interval);
         slideForwards();
-        setTimeout(() => {
-            interval = setInterval(slideForwards, slidingWaitTime);
-        }, restartWaitTime);
+        timeout = restartWithDelay();
     });
 
     prevButton.addEventListener('click', () => {
-        window.clearInterval(interval);
         slideBackwards();
-        setTimeout(() => {
-            interval = setInterval(slideForwards, slidingWaitTime);
-        }, restartWaitTime);
+        timeout = restartWithDelay();
     });
 };
 
