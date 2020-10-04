@@ -1,26 +1,26 @@
 const imgSlider = () => {
-    const firstImage = 0;
-    const lastImage = 12; // NOTE: keep it synchronized with index.html
+    const firstSlide = 0;
+    const lastSlide = 12; // NOTE: keep it synchronized with index.html
     const slidingWaitTime = 5000;
 
-    const imageElements = document.querySelectorAll('#hero .slider .slided');
+    const slidedElements = document.querySelectorAll('#hero .slider .slided');
     const nextButton = document.querySelector('#next');
     const prevButton = document.querySelector('#prev');
 
-    let currImage = firstImage;
+    let currSlide = firstSlide;
 
     const slideForwards = () => {
-        const nextImage = currImage < lastImage ? currImage + 1 : firstImage;
-        imageElements[currImage].classList.toggle('hidden'); // hide
-        imageElements[nextImage].classList.toggle('hidden'); // show
-        currImage = nextImage;
+        const nextSlide = currSlide < lastSlide ? currSlide + 1 : firstSlide;
+        slidedElements[currSlide].classList.toggle('hidden'); // hide
+        slidedElements[nextSlide].classList.toggle('hidden'); // show
+        currSlide = nextSlide;
     };
 
     const slideBackwards = () => {
-        const prevImage = currImage > firstImage ? currImage - 1 : lastImage;
-        imageElements[currImage].classList.toggle('hidden'); // hide
-        imageElements[prevImage].classList.toggle('hidden'); // show
-        currImage = prevImage;
+        const prevSlide = currSlide > firstSlide ? currSlide - 1 : lastSlide;
+        slidedElements[currSlide].classList.toggle('hidden'); // hide
+        slidedElements[prevSlide].classList.toggle('hidden'); // show
+        currSlide = prevSlide;
     };
 
     const interval = setInterval(slideForwards, slidingWaitTime);
