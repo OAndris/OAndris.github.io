@@ -2,7 +2,7 @@ const imgSlider = () => {
     const firstSlide = 0;
     const lastSlide = 12; // NOTE: keep it synchronized with index.html
     const slidingWaitTime = 5000;
-    const restartWaitTime = 5000;
+    const restartWaitTime = 2000;
 
     const slidedElements = document.querySelectorAll('#hero .slider .slided');
     const nextButton = document.querySelector('#next');
