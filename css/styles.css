@@ -244,7 +244,7 @@ header nav #burger div {
   text-align: center;
   max-height: calc(100vh - 60px);
   position: relative;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.375em;
 }
 
 #hero h2 {
@@ -264,7 +264,7 @@ header nav #burger div {
 
 #hero a.slider-nav {
   position: absolute;
-  top: 40%;
+  top: 45%;
   z-index: 1;
   height: 50px;
   width: 45px;
