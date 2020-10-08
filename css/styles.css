@@ -242,7 +242,9 @@ header nav #burger div {
 
 #hero {
   text-align: center;
+  max-height: calc(100vh - 60px);
   position: relative;
+  margin-bottom: 0.5em;
 }
 
 #hero h2 {
@@ -289,6 +291,11 @@ header nav #burger div {
 #hero a.slider-nav#next:hover {
   background-color: white;
   background-image: url("../../assets/widgets/arrow_right.svg");
+}
+
+#hero .slider .slided {
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
 }
 
 #hero .slider .slided img {

@@ -1,6 +1,10 @@
+$hero-height: calc(100vh - 60px);  // "calc(100vh - $header-height)" is not allowed
+
 #hero {
     text-align: center;
+    max-height: $hero-height;
     position: relative;
+    margin-bottom: 0.5em;
     h2 {
         z-index: 1;
         text-align: left;
@@ -43,6 +47,8 @@
         background-position: 50% 50%;
     }
     .slider .slided {
+        max-height: $hero-height;
+        overflow: hidden;
         img {
             width: 100%;
             animation: fadein 1s;
