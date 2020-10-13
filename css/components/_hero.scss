@@ -1,4 +1,6 @@
-$hero-height: calc(100vh - 60px);  // "calc(100vh - $header-height)" is not allowed
+$hero-height: calc(
+    100vh - 60px
+); // "calc(100vh - $header-height)" is not allowed
 
 #hero {
     text-align: center;
@@ -63,11 +65,11 @@ $hero-height: calc(100vh - 60px);  // "calc(100vh - $header-height)" is not allo
         }
         p {
             position: absolute;
-            top: 0;
+            bottom: 6px;
             right: 0;
             padding: 0.25em 0.5em;
             border: 0px solid black;
-            border-radius: 0 0 0 0.5em;
+            border-radius: 0.25em 0 0 0.25em;
             background: $hero-button-bg-color;
             font-size: 0.75rem;
             font-style: italic;
@@ -87,9 +89,13 @@ $hero-height: calc(100vh - 60px);  // "calc(100vh - $header-height)" is not allo
         h2 {
             font-size: 2.5vw;
         }
+        .slider .slided p {
+            font-size: 2.5vw;
+            display: block;
+        }
     }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 660px) {
     a.slider-nav {
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -99,16 +105,8 @@ $hero-height: calc(100vh - 60px);  // "calc(100vh - $header-height)" is not allo
         h2 {
             font-size: 1.5rem;
         }
-    }
-}
-@media screen and (min-width: 1050px) {
-    #hero .slider .slided p {
-        font-size: 1.3125rem;
-        display: block;
-    }
-}
-@media screen and (min-width: 1300px) {
-    #hero .slider .slided p {
-        font-size: 1.5rem;
+        .slider .slided p {
+            font-size: 1.5rem;
+        }
     }
 }

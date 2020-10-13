@@ -242,7 +242,7 @@ header nav #burger div {
 
 #hero {
   text-align: center;
-  max-height: calc(100vh - 60px);
+  max-height: calc( 100vh - 60px);
   position: relative;
   margin-bottom: 0.375em;
 }
@@ -294,7 +294,7 @@ header nav #burger div {
 }
 
 #hero .slider .slided {
-  max-height: calc(100vh - 60px);
+  max-height: calc( 100vh - 60px);
   overflow: hidden;
 }
 
@@ -315,11 +315,11 @@ header nav #burger div {
 
 #hero .slider .slided p {
   position: absolute;
-  top: 0;
+  bottom: 6px;
   right: 0;
   padding: 0.25em 0.5em;
   border: 0px solid black;
-  border-radius: 0 0 0 0.5em;
+  border-radius: 0.25em 0 0 0.25em;
   background: #808080;
   font-size: 0.75rem;
   font-style: italic;
@@ -336,9 +336,13 @@ header nav #burger div {
   #hero h2 {
     font-size: 2.5vw;
   }
+  #hero .slider .slided p {
+    font-size: 2.5vw;
+    display: block;
+  }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 660px) {
   a.slider-nav {
     background-color: rgba(0, 0, 0, 0.3);
   }
@@ -348,16 +352,6 @@ header nav #burger div {
   #hero h2 {
     font-size: 1.5rem;
   }
-}
-
-@media screen and (min-width: 1050px) {
-  #hero .slider .slided p {
-    font-size: 1.3125rem;
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1300px) {
   #hero .slider .slided p {
     font-size: 1.5rem;
   }
