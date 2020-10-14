@@ -325,7 +325,6 @@ header nav #burger div {
   font-style: italic;
   color: #e2e2e2;
   text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2), 1px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
-  display: none;
 }
 
 #hero .slider .slided.hidden {
@@ -338,7 +337,6 @@ header nav #burger div {
   }
   #hero .slider .slided p {
     font-size: 2.5vw;
-    display: block;
   }
 }
 
