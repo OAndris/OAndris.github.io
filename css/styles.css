@@ -875,12 +875,23 @@ footer .container .footer-section:last-child {
 }
 
 footer #copyright-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-top: 1px solid #afafaf;
   background: black;
   color: #636363;
   padding: 1.25em;
   font-size: 0.625rem;
+  font-weight: 800;
   text-transform: uppercase;
+}
+
+footer #copyright-container #created-by {
+  color: #636363;
 }
 
 @media screen and (min-width: 480px) {

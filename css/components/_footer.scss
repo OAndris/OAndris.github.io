@@ -47,12 +47,18 @@ footer {
         }
     }
     #copyright-container {
+        display: flex;
+        justify-content: space-between;
         border-top: 1px solid $copyright-border-top-color;
         background: $copyright-bg-color;
         color: $copyright-color;
         padding: 1.25em;
         font-size: 0.625rem;
+        font-weight: 800;
         text-transform: uppercase;
+        #created-by {
+            color: $copyright-color;
+        }
     }
 }
 
